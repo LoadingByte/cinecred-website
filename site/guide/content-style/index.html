@@ -1,0 +1,85 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.content-style.intro").format(' href="../credits-spreadsheet/#head-body-tail-blocks"', ' href="../credits-spreadsheet/#content-styles"') }}</p>
+  <h2>{{ l10n("guide.styleName") }}</h2>
+  <p>{{ l10n("guide.content-style.name.text") }}</p>
+  <img src="name.png" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.blockOrientation") }}</h2>
+  <p>{{ l10n("guide.content-style.orientation.text") }}</p>
+  <img src="block-orientation.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.spineAttachment") }}</h2>
+  <p>{{ l10n("guide.content-style.spineAttachment.spine").format(' href="../credits-spreadsheet/#spine-position"') }}</p>
+  <p>{{ l10n("guide.content-style.spineAttachment.setting") }}</p>
+  <img src="spine-attachment.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.vMarginPx") }}</h2>
+  <p>{{ l10n("guide.content-style.vMargin.setting") }}</p>
+  <p>{{ l10n("guide.content-style.vMargin.betweenSpines") }}</p>
+  <p>{{ l10n("guide.content-style.vMargin.example") }}</p>
+  <table>
+    <tr>
+      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
+      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
+      <th>@{{ l10n("cinecred.projectIO.credits.table.spinePos") }}</th>
+    </tr>
+    <tr><td>Director of Photography</td><td>Peter Panner</td><td></td></tr>
+    <tr><td>&nbsp;</td><td></td><td></td></tr>
+    <tr><td>Gaffer</td><td>Gustav Gluehbirne</td><td>0</td></tr>
+    <tr><td>&nbsp;</td><td></td><td></td></tr>
+    <tr><td>1st Assistant Camera</td><td>Paul Puller</td><td></td></tr>
+    <tr><td>2nd Assistant Camera</td><td>Charly Clapper</td><td></td></tr>
+    <tr><td></td><td>Luke Loader</td><td></td></tr>
+  </table>
+  <img src="vmargin.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.bodyLetterStyleName") }}</h2>
+  <p>{{ l10n("guide.content-style.bodyLetterStyle.external").format(' href="../letter-style/"') }}</p>
+  <p>{{ l10n("guide.content-style.bodyLetterStyle.reference") }}</p>
+  <img src="body-letter-style.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.bodyLayout") }}</h2>
+  <p>{{ l10n("guide.content-style.bodyLayout.cells") }}</p>
+  <p>{{ l10n("guide.content-style.bodyLayout.layout") }}</p>
+  <img src="body-layout.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <p>{{ l10n("guide.content-style.bodyLayout.options") }}</p>
+  <ul class="guide-page-list">
+    <li><a href="grid-layout/">{{ l10n("guide.content-style.grid-layout.title") }}</a></li>
+    <li><a href="flow-layout/">{{ l10n("guide.content-style.flow-layout.title") }}</a></li>
+    <li><a href="paragraphs-layout/">{{ l10n("guide.content-style.paragraphs-layout.title") }}</a></li>
+  </ul>
+  <h2>{{ l10n("guide.content-style.headTail.title") }}</h2>
+  <p>{{ l10n("guide.content-style.headTail.enable") }}</p>
+  <img src="has-head.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.content-style.headTail.letterStyle.title") }}</h3>
+  <p>{{ l10n("guide.content-style.headTail.letterStyle.text").format('<a href="#body-letter-style"><em>' + l10n("cinecred.ui.styling.content.bodyLetterStyleName") + "</em></a>", ' href="../letter-style/"') }}</p>
+  <img src="head-letter-style.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.content-style.headTail.forceWidth.title") }}</h3>
+  <p>{{ l10n("guide.content-style.headTail.forceWidth.text").format(' href="#head-body-tail-orientation"') }}</p>
+  <img src="head-force-width.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.content-style.headTail.matchWidth.title") }}</h3>
+  <p>{{ l10n("guide.content-style.headTail.matchWidth.behavior") }} {{ l10n("guide.content-style.breakMatch").format('<a href="../credits-spreadsheet/#break-match-advanced"><em>@' + l10n("cinecred.projectIO.credits.table.breakMatch") + "</em></a>") }}</p>
+  <p>{{ l10n("guide.content-style.headTail.matchWidth.precondition").format(' href="#head-body-tail-orientation"') }}</p>
+  <img src="head-match-width.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.content-style.headTail.hJustify.title") }}</h3>
+  <p>{{ l10n("guide.content-style.headTail.hJustify.text") }}</p>
+  <img src="head-hjustify.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.content-style.headTail.vJustify.title") }}</h3>
+  <p>{{ l10n("guide.content-style.headTail.vJustify.text").format(' href="#head-body-tail-orientation"') }}</p>
+  <img src="head-vjustify.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.content-style.headTail.bodyGap.title") }}</h3>
+  <p>{{ l10n("guide.content-style.headTail.bodyGap.text") }}</p>
+  <img src="head-gap.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.content-style.headTail.leader.title") }}</h3>
+  <p>{{ l10n("guide.content-style.headTail.leader.text") }}</p>
+  <img src="head-leader.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.content-style.headTail.leaderLetterStyle.title") }}</h3>
+  <p>{{ l10n("guide.content-style.headTail.leaderLetterStyle.text").format(' href="#head-tail-letter-style"') }}</p>
+  <img src="head-leader-letter-style.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.content-style.headTail.leaderJustify.title") }}</h3>
+  <p>{{ l10n("guide.content-style.headTail.leaderJustify.h") }}</p>
+  <img src="head-leader-hjustify.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <p>{{ l10n("guide.content-style.headTail.leaderJustify.v").format(' href="#vertically-hustify-head-tail"') }}</p>
+  <img src="head-leader-vjustify.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.content-style.headTail.leaderGaps.title") }}</h3>
+  <p>{{ l10n("guide.content-style.headTail.leaderGaps.text") }}</p>
+  <img src="head-leader-margin-and-spacing.gif" alt="{{ l10n("guide.settingDemo") }}">
+{% endblock %}

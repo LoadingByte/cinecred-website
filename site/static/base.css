@@ -1,0 +1,143 @@
+/* Fragment link scrolling should be smooth; does not affect user scrolling */
+html { scroll-behavior: smooth; }
+
+/* All foreground color changes should be smooth */
+* { transition: color 0.1s ease-in-out; }
+
+/* Standard margins and centering */
+p { margin: 0.5em 0; }
+h2 { margin: 1.2em 0 0.5em 0; }
+h3, h4 { margin: 1em 0 0.5em 0; }
+table { margin: 1em auto; }
+.table-scroll-wrapper { margin: 1em 0; }
+.table-scroll-wrapper > table { margin: 0 auto; }
+.figures { margin: 1em 0; }
+
+/* Standard link style */
+a { color: #362; }
+a:hover { color: #241; }
+
+/* Standard boxlink style */
+.boxlink {
+    padding: 0.1em 0.5em;
+    white-space: nowrap; /* line-wrapping boxlinks look awful */
+    border-radius: 0.3em;
+    text-decoration: none;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+    color: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.1);
+    border: 0.15em solid rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.3);
+}
+.boxlink:hover {
+    color: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 0.3em rgba(0, 0, 0, 0.4);
+}
+
+/* Standard code style */
+pre {
+    margin: 0;
+    padding: 1em;
+    white-space: pre-wrap;
+    line-height: 125%;
+}
+:not(pre) > code { padding: 0.1em 0.4em; }
+pre, :not(pre) > code {
+    background: #f8f8f8;
+    border: 0.1em solid #e0e0e0;
+    font-size: 1.1em; /* By default, code is rendered smaller than the rest; compensate for that, but only a bit. */
+}
+
+/* Standard table style */
+.table-scroll-wrapper { overflow-x: auto; }
+table { border-collapse: collapse; }
+th, td { border: 0.1em solid #cdcdcd; }
+th {
+    padding: 0.1em 1em;
+    text-align: center;
+    background: #e7e7e7;
+}
+td {
+    padding: 0.1em 0.7em;
+    background: #f8f8f8;
+}
+
+/* Standard figure style */
+.figures {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+.figures > figure { margin: 0; }
+figcaption { text-align: center; }
+
+/* Standard file list style */
+li.file { list-style-image: url('file.svg') }
+li.folder { list-style-image: url('folder.svg') }
+
+/* Basic structure */
+body {
+    margin: 0;
+    font-family: Titillium, sans-serif;
+    line-height: 1.6;
+    color: #2f2f2f;
+}
+#master { font-size: 1.1em; }
+header {
+    color: #eee;
+    background: #222;
+    text-align: center;
+}
+.site-title { font-family: "Titillium Upright", sans-serif; }
+
+/* Font faces */
+@font-face {
+    font-family: "Titillium";
+    font-weight: 400;
+    font-style: normal;
+    src: url('/static/fonts/Titillium-Regular.woff2') format('woff2'),
+         url('/static/fonts/Titillium-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: "Titillium";
+    font-weight: 400;
+    font-style: italic;
+    src: url('/static/fonts/Titillium-RegularItalic.woff2') format('woff2'),
+         url('/static/fonts/Titillium-RegularItalic.woff') format('woff');
+}
+@font-face {
+    font-family: "Titillium";
+    font-weight: 700;
+    font-style: normal;
+    src: url('/static/fonts/Titillium-Bold.woff2') format('woff2'),
+         url('/static/fonts/Titillium-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: "Titillium";
+    font-weight: 700;
+    font-style: italic;
+    src: url('/static/fonts/Titillium-BoldItalic.woff2') format('woff2'),
+         url('/static/fonts/Titillium-BoldItalic.woff') format('woff');
+}
+@font-face {
+    font-family: "Titillium Upright";
+    font-weight: 400;
+    font-style: normal;
+    src: url('/static/fonts/Titillium-RegularUpright.woff2') format('woff2'),
+         url('/static/fonts/Titillium-RegularUpright.woff') format('woff');
+}
+@font-face {
+    font-family: "Titillium Upright";
+    font-weight: 600;
+    font-style: normal;
+    src: url('/static/fonts/Titillium-SemiboldUpright.woff2') format('woff2'),
+         url('/static/fonts/Titillium-SemiboldUpright.woff') format('woff');
+}
+@font-face {
+    font-family: "Titillium Upright";
+    font-weight: 700;
+    font-style: normal;
+    src: url('/static/fonts/Titillium-BoldUpright.woff2') format('woff2'),
+         url('/static/fonts/Titillium-BoldUpright.woff') format('woff');
+}

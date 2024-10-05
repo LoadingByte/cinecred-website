@@ -1,0 +1,68 @@
+{% extends "_article.html" %}
+
+
+{% block head %}
+  {{ super() }}
+  <style>
+    table {
+      margin: 0;
+      border-collapse: initial;
+      border-spacing: 0 5px;
+    }
+    th, td {
+      padding: 0.5em 1.5em;
+      background: initial;
+      border: initial;
+      text-align: center;
+    }
+    th { white-space: nowrap; }
+    tbody tr { background-color: #eee; }
+    tbody tr:empty { height: 1.5em; }
+    tbody th { text-align: left; }
+    tbody th[rowspan] { font-size: 2em; }
+    tbody td { line-height: 2.1em; }
+    .boxlink { margin: 0 0.1em; }
+    @media (max-width: 850px) {
+      th, td { padding: 0.5em 0.7em; }
+    }
+  </style>
+{% endblock %}
+
+
+{% block article %}
+  <div class="table-scroll-wrapper">
+    <table>
+      <thead><tr><th></th><th></th><th>{{ l10n("dl.installer") }}</th><th>{{ l10n("dl.portable") }}</th></tr></thead>
+      <tbody>
+      {% for release in releases %}
+        {% if not loop.first %}
+          <tr></tr>
+        {% endif %}
+        {% for platform in platforms %}
+          {% set platform_assets = release.assets|selectattr("platform", "==", platform)|list %}
+          {% if platform_assets|length > 0 %}
+            {% set installer_assets = platform_assets|selectattr("kind", "in", ["MSI", "PKG", "DEB", "RPM"])|list %}
+            {% set portable_assets = platform_assets|reject("in", installer_assets) %}
+            <tr>
+              {% if loop.first %}
+                <th rowspan="{{ release.assets|unique(attribute="platform")|list|length }}">{{ release.version }}</th>
+              {% endif %}
+              <th>{{ platform }}</th>
+              <td>
+                {% for asset in installer_assets %}
+                  <a class="boxlink" href="/{{ asset.url }}"><strong>&DownArrowBar;</strong> {{ asset.kind }}</a>
+                {% endfor %}
+              </td>
+              <td>
+                {% for asset in portable_assets %}
+                  <a class="boxlink" href="/{{ asset.url }}"><strong>&DownArrowBar;</strong> {{ asset.kind }}</a>
+                {% endfor %}
+              </td>
+            </tr>
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

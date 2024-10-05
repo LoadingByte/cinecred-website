@@ -1,0 +1,38 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.content-style.flow-layout.intro") }}</p>
+  <img src="example.png" alt="">
+  <h2>{{ l10n("cinecred.ui.styling.content.flowDirection") }}</h2>
+  <p>{{ l10n("guide.content-style.flow-layout.flowDirection.text") }}</p>
+  <img src="direction.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.flowLineHJustify") }}</h2>
+  <p>{{ l10n("guide.content-style.flow-layout.justifyLines.text") }}</p>
+  <img src="line-hjustify.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.flowSquareCells") }}</h2>
+  <p>{{ l10n("guide.content-style.flow-layout.squareCells.text") }}</p>
+  <img src="square-cells.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.content-style.flow-layout.force.title") }}</h2>
+  <p>{{ l10n("guide.content-style.flow-layout.force.text") }}</p>
+  <img src="force-cell-width-and-height.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.content-style.flow-layout.match.title") }}</h2>
+  <p>{{ l10n("guide.content-style.flow-layout.match.text") }}</p>
+  <p>{{ l10n("guide.content-style.breakMatch").format('<a href="../credits-spreadsheet/#break-match-advanced"><em>@' + l10n("cinecred.projectIO.credits.table.breakMatch") + "</em></a>") }}</p>
+  <img src="match-cell-width-and-height.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.flowCellJustify") }}</h2>
+  <p>{{ l10n("guide.content-style.flow-layout.justifyCells.text") }}</p>
+  <img src="cell-hjustify-and-vjustify.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.flowLineWidthPx") }}</h2>
+  <p>{{ l10n("guide.content-style.flow-layout.lineWidth.text") }}</p>
+  <img src="line-width.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.content-style.flow-layout.gaps.title") }}</h2>
+  <p>{{ l10n("guide.content-style.flow-layout.gaps.text") }}</p>
+  <img src="line-gap-and-hgap.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.flowSeparator") }}</h2>
+  <p>{{ l10n("guide.content-style.flow-layout.separator.text").format('<a href="../#body-letter-style"><em>' + l10n("cinecred.ui.styling.content.bodyLetterStyleName") + "</em></a>") }}</p>
+  <img src="separator.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.flowSeparatorVJustify") }}</h2>
+  <p>{{ l10n("guide.content-style.flow-layout.separatorVJustify.text") }}</p>
+  <img src="separator-vjustify.gif" alt="{{ l10n("guide.settingDemo") }}">
+{% endblock %}

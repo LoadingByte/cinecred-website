@@ -1,0 +1,269 @@
+{% extends "_base.html" %}
+
+
+{% block tab_title %}Cinecred{% endblock %}
+
+
+{% block head %}
+  <meta name="description" content="{{ l10n("home.metaDescription") }}">
+  <link rel="stylesheet" type="text/css" href="/static/home.css">
+  <script type="text/javascript" src="/static/email.js"></script>
+  <style>
+    #layout-guides-button {
+      left: {{ 100 * choose_transl({"cs": 431, "de": 430, "en": 419, "fr": 406, "zh-CN": 414}) / 920 }}%;
+      top: {{ 100 * 6 / 610 }}%;
+      width: {{ 100 * 24 / 920 }}%;
+      height: {{ 100 * 24 / 610 }}%;
+    }
+    #runtime-adjustment-button {
+      left: {{ 100 * choose_transl({"cs": 440, "de": 447, "en": 452, "fr": 476, "zh-CN": 415}) / 900 }}%;
+      top: {{ 100 * 10 / 484 }}%;
+      width: {{ 100 * 24 / 900 }}%;
+      height: {{ 100 * 24 / 484 }}%;
+    }
+    #delivery-formats-button {
+      left: {{ 100 * choose_transl({"cs": 167, "de": 127, "en": 108, "fr": 164, "zh-CN": 95}) / 820 }}%;
+      top: {{ 100 * 41 / 590 }}%;
+      width: {{ 100 * choose_transl({"cs": 492, "de": 502, "en": 502, "fr": 495, "zh-CN": 502}) / 820 }}%;
+      height: {{ 100 * 26 / 590 }}%;
+    }
+  </style>
+{% endblock %}
+
+
+{% block master %}
+  <header>
+    <hgroup class="site-title">
+      <h1>Cinecred</h1>
+      <p>{{ l10n("cinecred.slogan") }}</p>
+    </hgroup>
+    <div id="downloads">
+      {% for asset in releases[0].assets %}
+        {% if asset.kind in ["MSI", "PKG", "AppImage"] %}
+          <a class="boxlink" href="/{{ asset.url }}">
+            <!-- Copyright 2000-2022 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+            <svg width="32" height="32">
+              <g transform="scale(2)" fill="currentColor">
+                <path d="M10.8536 8.16074C11.0489 7.96548 11.0489 7.6489 10.8536 7.45363C10.6584 7.25836 10.3418 7.25835 10.1465 7.45361L8.50005 9.10002L8.50005 1.5C8.50005 1.22386 8.27619 1 8.00005 1C7.72391 1 7.50005 1.22386 7.50005 1.5L7.50005 9.09999L5.85351 7.45348C5.65825 7.25822 5.34166 7.25822 5.1464 7.45349C4.95114 7.64875 4.95115 7.96533 5.14641 8.16059L7.6465 10.6606L8.00004 11.0142L8.35359 10.6606L10.8536 8.16074Z"/>
+                <rect width="12" height="1" rx="0.5" transform="matrix(1 0 0 -1 2 14)"/>
+                <rect x="2" y="10" width="1" height="4" rx="0.5"/>
+                <rect x="13" y="10" width="1" height="4" rx="0.5"/>
+              </g>
+            </svg>
+            <div><strong>{{ releases[0].version }}</strong><br>{{ asset.platform }} {{ asset.kind }}</div>
+          </a>
+        {% endif %}
+      {% endfor %}
+      <a class="boxlink" href="linux-repositories/">{{ l10n("linux-repositories.title") }}<br>APT YUM AUR Flathub</a>
+    </div>
+  </header>
+  {% set email_attrs = 'style="white-space: nowrap" href="" onclick="revealEmail(this, \'bV^aid/[Za^m5X^cZXgZY#Xdb\'); return false"' %}
+  <div id="quicklinks">
+    <a href="dl/">
+      <!-- Copyright 2000-2022 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+      <svg width="32" height="32">
+        <g transform="scale(2)" fill="currentColor">
+          <path d="M10.8536 8.16074C11.0489 7.96548 11.0489 7.6489 10.8536 7.45363C10.6584 7.25836 10.3418 7.25835 10.1465 7.45361L8.50005 9.10002L8.50005 1.5C8.50005 1.22386 8.27619 1 8.00005 1C7.72391 1 7.50005 1.22386 7.50005 1.5L7.50005 9.09999L5.85351 7.45348C5.65825 7.25822 5.34166 7.25822 5.1464 7.45349C4.95114 7.64875 4.95115 7.96533 5.14641 8.16059L7.6465 10.6606L8.00004 11.0142L8.35359 10.6606L10.8536 8.16074Z"/>
+          <rect width="12" height="1" rx="0.5" transform="matrix(1 0 0 -1 2 14)"/>
+          <rect x="2" y="10" width="1" height="4" rx="0.5"/>
+          <rect x="13" y="10" width="1" height="4" rx="0.5"/>
+        </g>
+      </svg>
+      {{ l10n("home.quicklinks.allDownloads") }}
+    </a>
+    <a href="security-warnings/">
+      <!-- Copyright 2000-2022 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+      <svg width="32" height="32">
+        <g transform="scale(2)" fill="currentColor">
+          <path d="M8 0.456787L14 3.00224V8.7777C14 10.5436 13.1076 11.835 11.9676 12.8566C11.1292 13.608 10.1082 14.2524 9.17138 14.8436C8.86018 15.04 8.55826 15.2306 8.2754 15.4172L8 15.599L7.7246 15.4172C7.44174 15.2306 7.13982 15.04 6.82862 14.8436C5.8918 14.2524 4.87083 13.608 4.03238 12.8566C2.89245 11.835 2 10.5436 2 8.7777V3.00224L8 0.456787ZM3 3.66427V8.7777C3 10.1552 3.67898 11.1971 4.69977 12.1119C5.46989 12.802 6.38449 13.3795 7.30229 13.959C7.53542 14.1062 7.76877 14.2536 8 14.4029C8.23123 14.2536 8.46458 14.1062 8.69771 13.959C9.61551 13.3795 10.5301 12.802 11.3002 12.1119C12.321 11.1971 13 10.1552 13 8.7777V3.66427L8 1.54306L3 3.66427Z"/>
+          <path d="M10.8536 5.72457C11.0488 5.91983 11.0488 6.23642 10.8536 6.43168L7.35355 9.93168C7.15829 10.1269 6.84171 10.1269 6.64645 9.93168L5.14645 8.43168C4.95118 8.23642 4.95118 7.91983 5.14645 7.72457C5.34171 7.52931 5.65829 7.52931 5.85355 7.72457L7 8.87102L10.1464 5.72457C10.3417 5.52931 10.6583 5.52931 10.8536 5.72457Z"/>
+        </g>
+      </svg>
+      {{ l10n("security-warnings.title") }}
+    </a>
+    <a href="guide/">
+      <!-- Copyright 2000-2022 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+      <svg width="32" height="32">
+        <g transform="scale(2)" fill="currentColor">
+          <path d="M3.5 7.77777V11.75C3.5 11.9394 3.607 12.1125 3.77639 12.1972L7.77639 14.1972C7.91716 14.2676 8.08284 14.2676 8.22361 14.1972L12.2236 12.1972C12.393 12.1125 12.5 11.9394 12.5 11.75V7.77777L11.5 8.33333V11.441L8 13.191L4.5 11.441V8.33333L3.5 7.77777Z"/>
+          <path d="M8 2.5L8.24282 2.06292C8.09181 1.97903 7.90819 1.97903 7.75718 2.06292L8 2.5ZM15 6.38889H15.5C15.5 6.20731 15.4016 6.04 15.2428 5.95181L15 6.38889ZM8 10.2778L7.75718 10.7149C7.90819 10.7988 8.09181 10.7988 8.24282 10.7149L8 10.2778ZM1 6.38889L0.757179 5.95181C0.598446 6.04 0.5 6.20731 0.5 6.38889C0.5 6.57047 0.598446 6.73778 0.757179 6.82597L1 6.38889ZM14.5 10.2778C14.5 10.5539 14.7239 10.7778 15 10.7778C15.2761 10.7778 15.5 10.5539 15.5 10.2778H14.5ZM7.75718 2.93708L14.7572 6.82597L15.2428 5.95181L8.24282 2.06292L7.75718 2.93708ZM14.7572 5.95181L7.75718 9.8407L8.24282 10.7149L15.2428 6.82597L14.7572 5.95181ZM8.24282 9.8407L1.24282 5.95181L0.757179 6.82597L7.75718 10.7149L8.24282 9.8407ZM1.24282 6.82597L8.24282 2.93708L7.75718 2.06292L0.757179 5.95181L1.24282 6.82597ZM14.5 6.38889V10.2778H15.5V6.38889H14.5Z"/>
+        </g>
+      </svg>
+      {{ l10n("guide.title") }}
+    </a>
+    <a href="screencast/">
+      <!-- Copyright 2000-2022 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+      <svg width="32" height="32">
+        <g transform="scale(2)" fill="none" stroke="currentColor">
+          <path d="M13.5 7.13397C14.1667 7.51888 14.1667 8.48113 13.5 8.86603L4.5 14.0622C3.83333 14.4471 3 13.966 3 13.1962L3 2.80385C3 2.03405 3.83333 1.55292 4.5 1.93782L13.5 7.13397Z"/>
+        </g>
+      </svg>
+      {{ l10n("screencast.title") }}
+    </a>
+    <a href="https://github.com/LoadingByte/cinecred" target="_blank">
+      <!-- Copyright 2000-2022 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+      <svg width="32" height="32">
+        <g transform="scale(2)" fill="currentColor">
+          <path d="M3.98755 9.77751C3.99755 9.39251 3.87005 9.08501 3.60505 8.85501C3.34005 8.62501 2.98255 8.51001 2.53255 8.51001H2V7.43001H2.53255C2.98255 7.43001 3.34005 7.31501 3.60505 7.08501C3.87005 6.85501 3.99755 6.54751 3.98755 6.16251L3.95755 4.58C3.94755 4.06 4.05505 3.605 4.28005 3.215C4.51005 2.825 4.83755 2.525 5.26255 2.315C5.68755 2.105 6.18755 2 6.76255 2H7.5V3.005H6.77005C6.25005 3.005 5.83755 3.15 5.53255 3.44C5.23255 3.725 5.08505 4.1125 5.09005 4.6025L5.12005 6.17001C5.13005 6.68001 4.99255 7.09751 4.70755 7.42251C4.42255 7.74251 4.03755 7.92001 3.55255 7.95501C4.03755 8.04501 4.42255 8.25501 4.70755 8.58501C4.99255 8.91001 5.13005 9.30501 5.12005 9.77001L5.09005 11.5475C5.08005 11.9875 5.21255 12.3375 5.48755 12.5975C5.76755 12.8625 6.14505 12.995 6.62005 12.995H7.5V14H6.61255C6.07755 14 5.60755 13.9 5.20255 13.7C4.80255 13.505 4.49255 13.2225 4.27255 12.8525C4.05755 12.4875 3.95255 12.06 3.95755 11.57L3.98755 9.77751Z"/>
+          <path d="M12.0145 9.77751C12.0045 9.39251 12.132 9.08501 12.397 8.85501C12.662 8.62501 13.0195 8.51001 13.4695 8.51001H14V7.43001H13.4695C13.0195 7.43001 12.662 7.31501 12.397 7.08501C12.132 6.85501 12.0045 6.54751 12.0145 6.16251L12.0445 4.58C12.0545 4.06 11.9445 3.605 11.7145 3.215C11.4895 2.825 11.1645 2.525 10.7395 2.315C10.3145 2.105 9.81455 2 9.23955 2H8.5V3.005H9.23205C9.75205 3.005 10.162 3.15 10.462 3.44C10.767 3.725 10.917 4.1125 10.912 4.6025L10.882 6.17001C10.872 6.68001 11.0095 7.09751 11.2945 7.42251C11.5795 7.74251 11.9645 7.92001 12.4495 7.95501C11.9645 8.04501 11.5795 8.25501 11.2945 8.58501C11.0095 8.91001 10.872 9.30501 10.882 9.77001L10.912 11.5475C10.922 11.9875 10.787 12.3375 10.507 12.5975C10.232 12.8625 9.85705 12.995 9.38205 12.995H8.5V14H9.38955C9.92455 14 10.392 13.9 10.792 13.7C11.197 13.505 11.507 13.2225 11.722 12.8525C11.942 12.4875 12.0495 12.06 12.0445 11.57L12.0145 9.77751Z"/>
+        </g>
+      </svg>
+      {{ l10n("home.quicklinks.sourceCode") }}
+    </a>
+    <a href="donate/">
+      <svg width="32" height="32">
+        <g fill="currentColor">
+          <path d="M 4.3322903,12.795166 H 26.129521 l -0.888164,2.136556 H 3.4441275 Z m 0,4.273111 H 24.353192 l -0.888163,2.136555 H 3.4441275 Z M 27.651778,9.1332422 a 10.682778,10.682778 0 1 0 0,13.7335138 v 3.00066 A 12.819334,12.819334 0 1 1 28.555872,6.9583606 Z"/>
+        </g>
+      </svg>
+      {{ l10n("donate.title") }}
+    </a>
+    <a {{ email_attrs }}>
+      <!-- Copyright 2000-2023 JetBrains s.r.o. and contributors. Use of this source code is governed by the Apache 2.0 license. -->
+      <svg width="32" height="32">
+        <g transform="scale(2)" fill="currentColor">
+          <path fill-rule="evenodd"
+                d="M10.9995 4C10.9995 5.65685 9.65637 7 7.99951 7C6.34266 7 4.99951 5.65685 4.99951 4C4.99951 2.34315 6.34266 1 7.99951 1C9.65637 1 10.9995 2.34315 10.9995 4ZM9.99951 4C9.99951 5.10457 9.10408 6 7.99951 6C6.89494 6 5.99951 5.10457 5.99951 4C5.99951 2.89543 6.89494 2 7.99951 2C9.10408 2 9.99951 2.89543 9.99951 4Z"/>
+          <path d="M7.99969 8C3.54766 8 2.39906 11.3034 2.10272 13.008C2.00813 13.5521 2.4474 14 2.99969 14H12.9997C13.552 14 13.9912 13.5521 13.8967 13.008C13.6003 11.3034 12.4517 8 7.99969 8ZM11.7438 10.5114C12.4081 11.2951 12.7281 12.2552 12.8778 13H3.12154C3.27126 12.2552 3.59131 11.2951 4.25563 10.5114C4.94028 9.70375 6.05804 9 7.99969 9C9.94134 9 11.0591 9.70375 11.7438 10.5114Z"/>
+        </g>
+      </svg>
+      [{{ l10n("home.quicklinks.email") }}]
+    </a>
+  </div>
+  <section class="single-column">
+    <h2>{{ l10n("home.paragraphs.problem.title") }}</h2>
+    <p>{{ l10n("cinecred.teaser")|replace("\\n\\n", "</p><p>") }}</p>
+  </section>
+  <section class="multi-column rtl">
+    <div>
+      <h2>{{ l10n("home.paragraphs.spreadsheet.title") }}</h2>
+      <p>{{ l10n("home.paragraphs.spreadsheet.text") }}</p>
+    </div>
+    <table class="spreadsheet">
+      <tr><td></td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td></tr>
+      <tr>
+        <td>1</td>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.vGap") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.contentStyle") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.spinePos") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.pageStyle") }}</th>
+      </tr>
+      <tr><td>2</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>3</td><td>A</td><td>Dirc Director</td><td>Film</td><td></td><td>{{ l10n("cinecred.project.PageBehavior.CARD") }}</td><td></td><td>{{ l10n("cinecred.project.PageBehavior.CARD") }}</td></tr>
+      <tr><td>4</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>5</td><td>Executive Producers</td><td>Callie Cash</td><td></td><td></td><td></td><td></td><td>{{ l10n("cinecred.project.PageBehavior.CARD") }}</td></tr>
+      <tr><td>6</td><td></td><td>Molly Money</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>7</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>8</td><td></td><td>Crew</td><td></td><td></td><td>{{ l10n("cinecred.project.template.contentStyleHeading") }}</td><td></td><td>{{ l10n("cinecred.project.PageBehavior.SCROLL") }}</td></tr>
+      <tr><td>9</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>10</td><td>Director of Photography</td><td>Peter Panner</td><td></td><td></td><td>{{ l10n("cinecred.project.template.contentStyleGutter") }}</td><td></td><td></td></tr>
+      <tr><td>11</td><td>1st Assistant Camera</td><td>Paul Puller</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>12</td><td>2nd Assistant Camera</td><td>Charly Clapper</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>13</td><td></td><td>Luke Loader</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>14</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td></tr>
+      <tr><td>15</td><td></td><td>Extras</td><td></td><td></td><td>{{ l10n("cinecred.project.template.contentStyleHeading") }}</td><td></td><td></td></tr>
+      <tr><td>16</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>17</td><td>Restaurant</td><td>Emil Eater</td><td></td><td></td><td>{{ l10n("cinecred.project.template.contentStyleBullets") }}</td><td></td><td></td></tr>
+      <tr><td>18</td><td></td><td>Megan Muncher</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>19</td><td></td><td>Dylan Delicious</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>20</td><td></td><td></td><td></td><td>3</td><td></td><td></td><td></td></tr>
+      <tr><td>21</td><td></td><td>Songs</td><td></td><td></td><td>{{ l10n("cinecred.project.template.contentStyleHeading") }}</td><td></td><td></td></tr>
+      <tr><td>22</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>23</td><td>“Loremium Ipsumium”</td><td>Written by Cicero</td><td></td><td></td><td>{{ l10n("cinecred.project.template.contentStyleSong") }}</td><td>-200</td><td></td></tr>
+      <tr><td>24</td><td></td><td>Dedicated to Brutus</td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>25</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>26</td><td>“Hoppe hoppe Reiter”</td><td>Written by an Unknown Lad</td><td></td><td></td><td></td><td>200 {{ l10n("cinecred.projectIO.credits.table.parallel") }}</td><td></td></tr>
+      <tr><td>27</td><td></td><td>in Ancient Germanic Times</td><td></td><td></td><td></td><td></td><td></td></tr>
+    </table>
+  </section>
+  <section class="multi-column">
+    <div>
+      <h2>{{ l10n("home.paragraphs.liveVis.title") }}</h2>
+      <p>{{ l10n("home.paragraphs.liveVis.text") }}</p>
+    </div>
+    <div class="flick">
+      <input id="layout-guides" type="checkbox" checked>
+      <img src="home/screenshot-live-vis-guides-off.png" alt="Screenshot of the live visualization w/o layout guides">
+      <img src="home/screenshot-live-vis-guides-on.png" alt="Screenshot of the live visualization with layout guides">
+      <label id="layout-guides-button" for="layout-guides" title="{{ l10n("home.paragraphs.liveVis.layoutGuides") }}"></label>
+    </div>
+  </section>
+  <section class="multi-column rtl">
+    <div>
+      <h2>{{ l10n("home.paragraphs.styling.title") }}</h2>
+      <p>{{ l10n("home.paragraphs.styling.text").format(' href="guide/"') }}</p>
+    </div>
+    <img src="home/screenshot-styling.png" alt="Screenshot of the styling UI">
+  </section>
+  <section class="multi-column">
+    <div>
+      <h2>{{ l10n("home.paragraphs.getStarted.title") }}</h2>
+      <p>{{ l10n("home.paragraphs.getStarted.text") }}</p>
+    </div>
+    <img src="home/credits-get-started.png" alt="Demonstration of quickly getting started with a locations block">
+  </section>
+  <section class="multi-column rtl">
+    <div>
+      <h2>{{ l10n("home.paragraphs.flexible.title") }}</h2>
+      <p>{{ l10n("home.paragraphs.flexible.text") }}</p>
+    </div>
+    <img src="home/credits-flexible-layout.png" alt="Demonstration of flexible layout">
+  </section>
+  <section class="multi-column">
+    <div>
+      <h2>{{ l10n("home.paragraphs.media.title") }}</h2>
+      <p>{{ l10n("home.paragraphs.media.text") }}</p>
+    </div>
+    <img src="home/credits-media.png" alt="Demonstration of embedded media">
+  </section>
+  <section class="multi-column rtl">
+    <div>
+      <h2>{{ l10n("home.paragraphs.runtime.title") }}</h2>
+      <p>{{ l10n("home.paragraphs.runtime.text") }}</p>
+    </div>
+    <div class="flick">
+      <input id="runtime-adjustment" type="checkbox">
+      <img src="home/credits-runtime-natural.png" alt="Demonstration of runtime adjustment before the change">
+      <img src="home/credits-runtime-adjusted.png" alt="Demonstration of runtime adjustment after the change">
+      <label id="runtime-adjustment-button" for="runtime-adjustment"></label>
+    </div>
+  </section>
+  <section class="multi-column">
+    <div>
+      <h2>{{ l10n("home.paragraphs.playback.title") }}</h2>
+      <p>{{ l10n("home.paragraphs.playback.text").format(' href="https://www.blackmagicdesign.com/' + choose_transl({"en": "", "de": "de/", "fr": "fr/", "zh-CN": "cn/"}) + 'products/decklink" target="_blank"') }}</p>
+    </div>
+    <img src="home/screenshot-video-preview.png" alt="Screenshot of the video preview">
+  </section>
+  <section class="multi-column rtl">
+    <div>
+      <h2>{{ l10n("home.paragraphs.delivery.title") }}</h2>
+      <p>{{ l10n("home.paragraphs.delivery.text") }}</p>
+    </div>
+    <div class="flick">
+      <input id="delivery-formats" type="checkbox">
+      <img src="home/screenshot-delivery-options.png" alt="Demonstration of all delivery options">
+      <img src="home/screenshot-delivery-formats.png" alt="Demonstration of the delivery format dropdown">
+      <label id="delivery-formats-button" for="delivery-formats"></label>
+    </div>
+  </section>
+  <section class="multi-column">
+    <div>
+      <h2>{{ l10n("home.paragraphs.free.title") }}</h2>
+      <p>{{ l10n("home.paragraphs.free.text").format(' href="https://github.com/LoadingByte/cinecred" target="_blank"', '<a ' + email_attrs + '>[' + l10n('unveilEmail') + ']</a>') }}</p>
+    </div>
+    <img id="gpl-image" src="home/gpl-v3.svg" alt="GPLv3 Logo">
+  </section>
+  <section class="single-column">
+    <h2>{{ l10n("home.paragraphs.sampleCredits.title") }}</h2>
+    <p>{{ l10n("home.paragraphs.sampleCredits.text") }}</p>
+    <video src="home/credits-demo.mp4" poster="home/credits-demo-poster.png" preload="none" controls></video>
+  </section>
+  <section class="single-column">
+    <h2>{{ l10n("home.paragraphs.try.title") }}</h2>
+    <a id="up-button" href="#" onclick="window.scroll({top: 0}); return false">{{ l10n("home.paragraphs.try.button") }}</a>
+  </section>
+{% endblock %}

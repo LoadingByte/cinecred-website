@@ -1,0 +1,58 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.letter-style.intro").format(' href="../content-style/"', ' href="../credits-spreadsheet/#tags"') }}</p>
+  <p>{{ l10n("guide.letter-style.changeFontSize") }}</p>
+  <h2>{{ l10n("guide.styleName") }}</h2>
+  <p>{{ l10n("guide.letter-style.name.text") }}</p>
+  <img src="name.png" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.font") }}</h2>
+  <p>{{ l10n("guide.letter-style.font.basics") }}</p>
+  <p>{{ l10n("guide.letter-style.font.system") }}</p>
+  <img src="font.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.heightPx") }}</h2>
+  <p>{{ l10n("guide.letter-style.height.text") }}</p>
+  <img src="height.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.leadingRh") }}</h2>
+  <p>{{ l10n("guide.letter-style.leading.text") }}</p>
+  <img src="leading.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.trackingEm") }}</h2>
+  <p>{{ l10n("guide.letter-style.tracking.text").format('<a href="#kerning"><em>' + l10n("cinecred.ui.styling.letter.kerning") + "</em></a>", '<a href="#ligatures"><em>' + l10n("cinecred.ui.styling.letter.ligatures") + "</em></a>") }}</p>
+  <img src="tracking.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.kerning") }}</h2>
+  <p>{{ l10n("guide.letter-style.kerning.settings") }}</p>
+  <p>{{ l10n("guide.letter-style.kerning.features").format("<code>kern</code>") }}</p>
+  <img src="kerning.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.ligatures") }}</h2>
+  <p>{{ l10n("guide.letter-style.ligatures.setting") }}</p>
+  <p>{{ l10n("guide.letter-style.ligatures.features").format("<code>liga</code>", "<code>clig</code>") }}</p>
+  <img src="ligatures.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.uppercase") }}</h2>
+  <p>{{ l10n("guide.letter-style.uppercase.basics") }}</p>
+  <p>{{ l10n("guide.letter-style.uppercase.exceptions").format("<em>" + l10n("cinecred.ui.styling.letter.useUppercaseExceptions") + "</em>", '<a href="../project-settings/#uppercase-exceptions"><em>' + l10n("cinecred.ui.styling.global.uppercaseExceptions") + "</em></a>") }}</p>
+  <p>{{ l10n("guide.letter-style.uppercase.spacing").format("<em>" + l10n("cinecred.ui.styling.letter.useUppercaseSpacing") + "</em>", "<code>cpsp</code>") }}</p>
+  <img src="uppercase.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.smallCaps") }}</h2>
+  <p>{{ l10n("guide.letter-style.smallCaps.setting") }}</p>
+  <p>{{ l10n("guide.letter-style.smallCaps.features").format("<code>smcp</code>", "<code>pcap</code>") }}</p>
+  <img src="small-caps.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.superscript") }}</h2>
+  <p>{{ l10n("guide.letter-style.superscript.basics") }}</p>
+  <p style="text-align: center">a<sup>b<sup>c</sup></sup></p>
+  <p>{{ l10n("guide.letter-style.superscript.custom").format("<em>" + l10n("cinecred.custom") + "</em>") }}</p>
+  <p>{{ l10n("guide.letter-style.superscript.features").format("<code>sups</code>", "<code>subs</code>", ' href="#opentype-features"') }}</p>
+  <img src="superscript.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.hScaling") }}</h2>
+  <p>{{ l10n("guide.letter-style.hScaling.text") }}</p>
+  <img src="hscaling.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.features") }}</h2>
+  <p>{{ l10n("guide.letter-style.features.setting") }}</p>
+  <p>{{ l10n("guide.letter-style.features.available").format(' href="https://learn.microsoft.com/en-us/typography/opentype/spec/featurelist" target="_blank"') }}</p>
+  <img src="features.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.letter-style.layers.title") }}</h2>
+  <p>{{ l10n("guide.letter-style.layers.text") }}</p>
+  <ul class="guide-page-list">
+    <li><a href="layer/">{{ l10n("guide.letter-style.layer.title") }}</a></li>
+  </ul>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "_base.html" %}
+
+
+{% block tab_title %}{{ title }} &middot; Cinecred{% endblock %}
+
+
+{% block head %}
+  <link rel="stylesheet" type="text/css" href="/static/article.css">
+{% endblock %}
+
+
+{% block master %}
+  <header class="site-title">Cinecred</header>
+  <nav class="toc">
+    [[TOC]]
+  </nav>
+  <main class="pillar">
+    <h1 class="article-title">{{ title }}</h1>
+    {% block article %}{% endblock %}
+  </main>
+{% endblock %}

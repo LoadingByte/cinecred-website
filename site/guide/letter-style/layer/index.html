@@ -1,0 +1,77 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.letter-style.layer.intro") }}</p>
+  <p>{{ l10n("guide.letter-style.layer.basics").format("<em>" + l10n("cinecred.ui.form.layerDelete") + "</em>") }}</p>
+  <p>{{ l10n("guide.letter-style.layer.advanced").format("<em>" + l10n("cinecred.ui.form.layerAdvanced") + "</em>") }}</p>
+  <img src="handling.gif" alt="{{ l10n("guide.letter-style.layer.alt") }}">
+  <h2>{{ l10n("cinecred.ui.styling.letter.inheritLayersFromStyle") }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.inherit.text") }}</p>
+  <table>
+    <tr>
+      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
+      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
+      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
+    </tr>
+    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.style") }} {{ l10n("demo.styleOne") }}&rbrace;&rbrace;Lorem&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.style") }}&rbrace;&rbrace; ipsum &lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.style") }} {{ l10n("demo.styleOne") }}&rbrace;&rbrace;dolor</td><td></td></tr>
+  </table>
+  <img src="inherit.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.layer.coloring") }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.coloring.text") }}</p>
+  <img src="coloring.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.colon").format(l10n("cinecred.ui.styling.layer.shape"), l10n("cinecred.project.LayerShape.TEXT")) }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.textShape.intro").format("<em>" + l10n("cinecred.ui.styling.layer.shape") + "</em>", l10n("cinecred.project.LayerShape.TEXT")) }}</p>
+  <img src="shape-text.png" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.colon").format(l10n("cinecred.ui.styling.layer.shape"), l10n("cinecred.project.LayerShape.STRIPE")) }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.stripeShape.intro").format("<em>" + l10n("cinecred.ui.styling.layer.shape") + "</em>", l10n("cinecred.project.LayerShape.STRIPE")) }}</p>
+  <img src="shape-stripe.png" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("cinecred.ui.styling.layer.stripePreset") }}</h3>
+  <p>{{ l10n("guide.letter-style.layer.stripeShape.preset.text") }}</p>
+  <img src="stripe-preset.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("cinecred.ui.styling.layer.stripeWidenRfh") }}</h3>
+  <p>{{ l10n("guide.letter-style.layer.stripeShape.widening.text") }}</p>
+  <img src="stripe-widen.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("cinecred.ui.styling.layer.stripeCornerJoin") }}</h3>
+  <p>{{ l10n("guide.letter-style.layer.stripeShape.corners.text") }}</p>
+  <img src="stripe-corner.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("cinecred.ui.styling.layer.stripeDashPatternRfh") }}</h3>
+  <p>{{ l10n("guide.letter-style.layer.stripeShape.dash.setting") }}</p>
+  <ul>
+    <li>{{ l10n("guide.letter-style.layer.stripeShape.dash.example1") }}</li>
+    <li>{{ l10n("guide.letter-style.layer.stripeShape.dash.example2") }}</li>
+    <li>{{ l10n("guide.letter-style.layer.stripeShape.dash.example3") }}</li>
+  </ul>
+  <img src="stripe-dash-pattern.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.colon").format(l10n("cinecred.ui.styling.layer.shape"), l10n("cinecred.project.LayerShape.CLONE")) }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.cloneShape.intro").format("<em>" + l10n("cinecred.ui.styling.layer.shape") + "</em>", l10n("cinecred.project.LayerShape.CLONE"), '<a href="#offset-scaling-shearing"><em>' + l10n("cinecred.ui.styling.layer.offset") + "</em></a>") }}</p>
+  <img src="shape-clone.png" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.layer.dilation") }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.dilation.text") }}</p>
+  <img src="dilation.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.layer.contour") }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.contour.text") }}</p>
+  <img src="contour.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.layer.offset") }}/{{ l10n("cinecred.ui.styling.layer.scaling") }}/{{ l10n("cinecred.ui.styling.layer.shearing") }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.transform.text") }}</p>
+  <img src="transform.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.layer.anchor") }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.anchor.basics") }}</p>
+  <ul>
+    <li>{{ l10n("guide.letter-style.layer.anchor.individual").format(l10n("cinecred.project.LayerAnchor.INDIVIDUAL")) }}</li>
+    <li>{{ l10n("guide.letter-style.layer.anchor.global").format(l10n("cinecred.project.LayerAnchor.GLOBAL")) }}</li>
+  </ul>
+  <img src="anchor.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <p>{{ l10n("guide.letter-style.layer.anchor.forClone").format("<em>" + l10n("cinecred.project.LayerShape.CLONE") + "</em>") }}</p>
+  <ul>
+    <li>{{ l10n("guide.letter-style.layer.anchor.sibling").format(l10n("cinecred.project.LayerAnchor.SIBLING"), "<em>" + l10n("cinecred.project.LayerShape.CLONE") + "</em>") }}</li>
+  </ul>
+  <img src="anchor-clone.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.layer.clearing") }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.clear.setting") }}</p>
+  <p>{{ l10n("guide.letter-style.layer.clear.example") }}</p>
+  <img src="clearing.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.layer.blurRadiusRfh") }}</h2>
+  <p>{{ l10n("guide.letter-style.layer.blur.text") }}</p>
+  <img src="blur.gif" alt="{{ l10n("guide.settingDemo") }}">
+{% endblock %}

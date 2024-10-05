@@ -1,0 +1,29 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.hintsAndScreencast").format(' href="../screencast/"') }}</p>
+  <p>{{ l10n("guide.intro") }}</p>
+  <ul class="guide-page-list">
+    <li><a href="project-folder/">{{ l10n("guide.project-folder.title") }}</a></li>
+    <li><a href="user-interface/">{{ l10n("guide.user-interface.title") }}</a></li>
+    <li><a href="credits-spreadsheet/">{{ l10n("guide.credits-spreadsheet.title") }}</a></li>
+    <li><a href="project-settings/">{{ l10n("guide.project-settings.title") }}</a></li>
+    <li><a href="page-style/">{{ l10n("guide.page-style.title") }}</a></li>
+    <li>
+      <a href="content-style/">{{ l10n("guide.content-style.title") }}</a>
+      <ul>
+        <li><a href="content-style/grid-layout/">{{ l10n("guide.content-style.grid-layout.title") }}</a></li>
+        <li><a href="content-style/flow-layout/">{{ l10n("guide.content-style.flow-layout.title") }}</a></li>
+        <li><a href="content-style/paragraphs-layout/">{{ l10n("guide.content-style.paragraphs-layout.title") }}</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="letter-style/">{{ l10n("guide.letter-style.title") }}</a>
+      <ul>
+        <li><a href="letter-style/layer/">{{ l10n("guide.letter-style.layer.title") }}</a></li>
+      </ul>
+    </li>
+    <li><a href="color-management/">{{ l10n("guide.color-management.title") }}</a></li>
+  </ul>
+{% endblock %}

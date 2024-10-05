@@ -1,0 +1,37 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.content-style.grid-layout.intro") }}</p>
+  <img src="example.png" alt="">
+  <h2>{{ l10n("cinecred.ui.styling.content.gridFillingOrder") }}</h2>
+  <p>{{ l10n("guide.content-style.grid-layout.fillingOrder.text") }}</p>
+  <img src="filling-order.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.gridFillingBalanced") }}</h2>
+  <p>{{ l10n("guide.content-style.grid-layout.balancedFilling.text") }}</p>
+  <img src="filling-balanced.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.gridStructure") }}</h2>
+  <p>{{ l10n("guide.content-style.grid-layout.gridStructure.text") }}</p>
+  <img src="structure.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.content-style.grid-layout.force.title") }}</h2>
+  <p>{{ l10n("guide.content-style.grid-layout.force.text") }}</p>
+  <img src="force-col-width-and-row-height.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.gridMatchColWidths") }}</h2>
+  <p>{{ l10n("guide.content-style.grid-layout.matchWidth.basics") }}</p>
+  <p>{{ l10n("guide.content-style.grid-layout.matchWidth.mismatch") }}</p>
+  <p>{{ l10n("guide.content-style.breakMatch").format('<a href="../credits-spreadsheet/#break-match-advanced"><em>@' + l10n("cinecred.projectIO.credits.table.breakMatch") + "</em></a>") }}</p>
+  <img src="match-col-widths.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.gridMatchRowHeight") }}</h2>
+  <p>{{ l10n("guide.content-style.grid-layout.matchHeight.text") }}</p>
+  <p>{{ l10n("guide.content-style.breakMatch").format('<a href="../credits-spreadsheet/#break-match-advanced"><em>@' + l10n("cinecred.projectIO.credits.table.breakMatch") + "</em></a>") }}</p>
+  <img src="match-row-height.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.gridCellHJustifyPerCol") }}</h2>
+  <p>{{ l10n("guide.content-style.grid-layout.hJustify.text") }}</p>
+  <img src="cell-hjustify-per-col.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.gridCellVJustify") }}</h2>
+  <p>{{ l10n("guide.content-style.grid-layout.vJustify.text") }}</p>
+  <img src="cell-vjustify.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.content-style.grid-layout.gaps.title") }}</h2>
+  <p>{{ l10n("guide.content-style.grid-layout.gaps.text") }}</p>
+  <img src="row-and-col-gaps.gif" alt="{{ l10n("guide.settingDemo") }}">
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.content-style.paragraphs-layout.intro") }}</p>
+  <img src="example.png" alt="">
+  <h2>{{ l10n("cinecred.ui.styling.content.paragraphsLineHJustify") }}</h2>
+  <p>{{ l10n("guide.content-style.paragraphs-layout.justifyLines.text") }}</p>
+  <img src="line-hjustify.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.content.paragraphsLineWidthPx") }}</h2>
+  <p>{{ l10n("guide.content-style.paragraphs-layout.lineWidth.text") }}</p>
+  <img src="line-width.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.content-style.paragraphs-layout.gaps.title") }}</h2>
+  <p>{{ l10n("guide.content-style.paragraphs-layout.gaps.text") }}</p>
+  <img src="paragraph-gap-and-line-gap.gif" alt="{{ l10n("guide.settingDemo") }}">
+{% endblock %}

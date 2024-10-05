@@ -1,0 +1,28 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.color-management.targetAudience") }}</p>
+  <p>{{ l10n("guide.color-management.pixelFormat").format(' href="https://github.com/sekrit-twc/zimg" target="_blank"') }}</p>
+  <p>{{ l10n("guide.color-management.colorTags") }}</p>
+  <h2>{{ l10n("guide.color-management.gamut.title") }}</h2>
+  <p>{{ l10n("guide.color-management.gamut.rendering") }}</p>
+  <p>{{ l10n("guide.color-management.gamut.reduction") }}</p>
+  <h2>{{ l10n("guide.color-management.trc.title") }}</h2>
+  <p>{{ l10n("guide.color-management.trc.gamma") }}</p>
+  <ul>
+    <li>{{ l10n("guide.color-management.trc.gamma.expectation") }}</li>
+    <li>{{ l10n("guide.color-management.trc.gamma.perception") }}</li>
+    <li>{{ l10n("guide.color-management.trc.gamma.antialiasing") }}</li>
+  </ul>
+  <p>{{ l10n("guide.color-management.trc.displayReferred") }}</p>
+  <h3>{{ l10n("guide.color-management.trc.hdr.title") }}</h3>
+  <p>{{ l10n("guide.color-management.trc.hdr.mapping") }}</p>
+  <ul>
+    <li>{{ l10n("guide.color-management.trc.hdr.mapping.pq") }}</li>
+    <li>{{ l10n("guide.color-management.trc.hdr.mapping.hlg") }}</li>
+  </ul>
+  <p>{{ l10n("guide.color-management.trc.hdr.preserve") }}</p>
+  <h2>{{ l10n("guide.color-management.colorPicker.title") }}</h2>
+  <p>{{ l10n("guide.color-management.colorPicker.text") }}</p>
+{% endblock %}

@@ -1,0 +1,49 @@
+/* Site title */
+.site-title {
+    padding: 0.35em 0;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+/* Content down the center of the page */
+.pillar {
+    margin: 0 auto 3em auto;
+    padding: 0 4vw;
+    max-width: 70rem;
+}
+.pillar > img {
+    display: block;
+    margin: 1em auto;
+    max-width: 100%;
+}
+
+/* Article title */
+.article-title {
+    margin: 2rem 0;
+    border-bottom: 0.3rem dotted #666;
+}
+
+/* Table of contents */
+.toc {
+    position: sticky;
+    box-sizing: border-box;
+    float: right;
+    top: 2rem; /* navbar height */
+    padding: 2.5em 2em 0 3em;
+    width: calc((100% - 70rem) / 2);
+}
+.toc > ul {
+    padding: 0.1em 0 0.3em 0.7em;
+    border-left: 2px solid #ccc;
+}
+.toc > ul ul { padding-left: 1em; }
+.toc li {
+    padding: 0.1em 0;
+    list-style-type: none;
+}
+.toc a { text-decoration: none; }
+
+/* Guide page list */
+.guide-page-list { padding-left: 2em; }
+.guide-page-list li { list-style-type: none; }

@@ -1,0 +1,38 @@
+@media (max-width: 1600px) {
+    .toc { display: none; }
+}
+
+@media (max-width: 1500px) {
+    section.multi-column {
+        flex-direction: column !important;
+        text-align: center;
+    }
+    section.multi-column > *, section img { max-width: 100%; }
+}
+
+@media (max-width: 1150px) {
+    header { font-size: 0.8em; }
+    #master, section { font-size: inherit; }
+    #quicklinks { font-size: 0.8em; }
+    #quicklinks > a { padding: 1.5em; }
+}
+
+@media (max-width: 800px) {
+    #breadcrumb { display: none; }
+    /* Disable the stuff we have set up for clipping the breadcrumb */
+    #navbar-right { padding-left: 0; }
+    #quicklinks > a { padding: 1.5em 1em; }
+}
+
+@media (max-width: 550px) {
+    #privacy-policy-link { display: none; }
+}
+
+@media (max-width: 400px) {
+    #navbar-right { column-gap: 1.2em; }
+    #up-button {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+}

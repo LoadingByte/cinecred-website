@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block tab_title %}{% endblock %}</title>
+  <link rel="icon" href="/static/logo.png">
+  <link rel="stylesheet" type="text/css" href="/static/base.css">
+  <link rel="stylesheet" type="text/css" href="/static/nav.css">
+  {% block head %}{% endblock %}
+  <link rel="stylesheet" type="text/css" href="/static/media-queries.css">
+</head>
+<body>
+{% include "_nav.html" %}
+<div id="master">
+  {% block master %}{% endblock %}
+</div>
+</body>
+</html>

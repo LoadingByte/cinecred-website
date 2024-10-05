@@ -1,0 +1,70 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.project-folder.structure") }}</p>
+  <ul>
+    <li>{{ l10n("guide.project-folder.structure.creditsFile").format("<em>Credits.xlsx/xls/ods/csv</em>", "<em>Credits.url/webloc</em>") }}</li>
+    <li>{{ l10n("guide.project-folder.structure.stylingFile").format("<em>Styling.toml</em>") }}</li>
+    <li>{{ l10n("guide.project-folder.structure.fontFiles").format("TrueType <em>ttf/ttc</em>", "OpenType <em>otf/otc</em>") }}</li>
+    <li>{{ l10n("guide.project-folder.structure.rasterPicFiles").format("<em>png/tiff/jpg/tga/psd</em>") }}</li>
+    <li>{{ l10n("guide.project-folder.structure.vectorPicFiles").format("<em>svg/pdf/ai/eps/ps</em>") }}</li>
+    <li>{{ l10n("guide.project-folder.structure.videoFiles").format("<em>mov/mkv/mxf/mp4</em>") }}</li>
+    <li>{{ l10n("guide.project-folder.structure.imgSeqFolders") }}</li>
+  </ul>
+  <p>{{ l10n("guide.project-folder.example") }}</p>
+  <ul>
+    <li class="folder">
+      {{ l10n("demo.projectDir") }}
+      <ul>
+        <li class="file">Credits.csv</li>
+        <li class="file">Styling.toml</li>
+        <li class="folder">
+          Fonts
+          <ul>
+            <li class="file">Blabladino.ttf</li>
+          </ul>
+        </li>
+        <li class="folder">
+          Logos
+          <ul>
+            <li class="folder">
+              Rental
+              <ul>
+                <li class="file">Blubber Rent.eps</li>
+                <li class="file">Hintertupfingen Verleih.svg</li>
+              </ul>
+            </li>
+            <li class="folder">
+              Software
+              <ul>
+                <li class="file">Cinecred.svg</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="folder">
+          Videos
+          <ul>
+            <li class="file">Blooper.mov</li>
+            <li class="folder">
+              Vanity Card
+              <ul>
+                <li class="file">Vanity Card.0000001.png</li>
+                <li class="file">Vanity Card.0000002.png</li>
+                <li class="file">Vanity Card.0000003.png</li>
+                <li class="file">…</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>{{ l10n("guide.project-folder.share") }}</p>
+  <h2>{{ l10n("guide.project-folder.create.title") }}</h2>
+  <p>{{ l10n("guide.project-folder.create.how") }}</p>
+  <img src="create-project.gif" alt="">
+  <p>{{ l10n("guide.project-folder.create.googleSheet") }}</p>
+  <img src="add-online-account.gif" alt="">
+{% endblock %}

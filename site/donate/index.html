@@ -1,0 +1,20 @@
+{% extends "_article.html" %}
+
+
+{% block head %}
+  {{ super() }}
+  <script type="text/javascript" src="/static/email.js"></script>
+{% endblock %}
+
+
+{% block article %}
+  <p>{{ l10n("donate.intro") }}</p>
+  <h2>{{ l10n("donate.paypal.title") }}</h2>
+  <a href="https://www.paypal.com/donate/?hosted_button_id=VDLW743GW4696{{ choose_transl({"en": "", "de": "&locale.x=de_DE"}) }}"
+     target="_blank">
+    {# These images were retrieved from URLs like https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif #}
+    <img src="paypal.gif" alt="PayPal">
+  </a>
+  <h2>{{ l10n("donate.sepa.title") }}</h2>
+  <p>{{ l10n("donate.sepa.text").format('<a style="white-space: nowrap" href="" onclick="revealEmail(this, \'bV^aid/[Za^m5X^cZXgZY#Xdb\'); return false">[' + l10n('unveilEmail') + ']</a>') }}</p>
+{% endblock %}

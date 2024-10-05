@@ -1,0 +1,89 @@
+/* Avoid the navbar overlapping the rest of the page */
+#navbar-spacer { height: 2em; }
+/* Avoid the navbar overlapping headings when scrolling to them via fragment links */
+* { scroll-margin-top: 2em; }
+
+#navbar-outer {
+    background: #f4f4f4;
+    box-shadow: 0 0 0.3em #646464;
+    line-height: 1.4;
+    /* Let the navbar at the top of the view when scrolling */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* always on top of other components */
+    /* Wrapping text would increase the height of the navbar, destroying our design */
+    white-space: nowrap;
+}
+
+#navbar-inner {
+    display: grid;
+    grid-template-columns: minmax(0, auto) max-content;
+    max-width: 70em;
+    margin: 0 auto;
+    padding: 0 4vw;
+}
+#navbar-left, #navbar-right {
+    display: flex;
+    column-gap: 2em;
+}
+#navbar-right {
+    /* Right-side part should overlap left-side part if there is not enough space */
+    padding-left: 2em;
+    background: #f4f4f4;
+}
+
+#navbar-logo { display: block; }
+
+/* All navbar items should be 2em high */
+#navbar-logo { height: 2em; }
+.navbar-dropdown > label, .navbar-text { line-height: 2em; }
+
+/* Navbar text foreground */
+.navbar-text, .navbar-text a { color: #6a6a6a; }
+a.navbar-text:hover, .navbar-text a:hover { color: #282828; }
+
+/* Dropdown button & dropdown box background */
+.navbar-dropdown > label, .navbar-dropdown > ul { background: #eee; }
+/* ... foreground */
+.navbar-dropdown > label { color: #666666; }
+.navbar-dropdown > label:hover { color: #242424; }
+.navbar-dropdown, .navbar-dropdown a { color: #4f4f4f; }
+.navbar-dropdown a:hover { color: #0e0e0e; }
+/* ... font style */
+.navbar-dropdown > ul a { text-decoration: solid underline #cecece; }
+
+.navbar-dropdown > label {
+    display: block;
+    padding: 0 1em;
+    box-shadow: -0.2em 0 0.2em -0.1em #a6a6a6, 0.2em 0 0.2em -0.1em #a6a6a6;
+}
+
+/* In Firefox, Titillium has a lot of space at the top. We shift these navbar boxes so that they again look centered. */
+@supports (-moz-appearance:none) {
+    .navbar-text, .navbar-dropdown > label {
+        margin-top: -0.1em;
+        padding-bottom: 0.1em;
+    }
+}
+
+/* Remove default li bullets and ul margin in the dropdowns, and reduce left ul padding */
+.navbar-dropdown ul { margin: 0; padding-left: 2em; }
+.navbar-dropdown li { list-style: none; }
+
+/* Dropdown box */
+.navbar-dropdown > ul {
+    position: absolute;
+    overflow-y: auto;
+    max-height: 85vh;
+    padding: 0.5em 1.2em;
+    box-shadow: 0 0 0.3em #575757;
+    scrollbar-color: #bbb #eee;
+}
+
+/* Hide the dropdown checkboxes */
+.navbar-dropdown > input { display: none; }
+/* Show/hide dropdown via checkboxes */
+.navbar-dropdown > ul { display: none; }
+.navbar-dropdown > input:checked ~ ul { display: block; }

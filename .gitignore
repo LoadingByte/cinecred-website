@@ -1,0 +1,17 @@
+*.appimage
+*.deb
+*.gif
+*.jpg
+*.mp4
+*.msi
+*.pkg
+*.png
+*.rpm
+*.tar.gz
+*.zip
+/site/dl/*/*
+
+*.sh
+/build/
+__pycache__/
+/.idea/

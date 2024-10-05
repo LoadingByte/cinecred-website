@@ -1,0 +1,7 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("screencast.text").format(' href="../guide/"') }}</p>
+  <video src="screencast.mp4" poster="screencast-poster.png" preload="none" controls style="display: block; margin: 1em 0; width: 100%"></video>
+{% endblock %}

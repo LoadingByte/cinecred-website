@@ -1,0 +1,179 @@
+/* Site title */
+.site-title h1 {
+    margin: 0;
+    padding-top: 1em;
+    font-size: 5em;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+.site-title p {
+    margin: 0 auto;
+    padding: 0 4vw 2em 4vw;
+    max-width: 50em;
+    font-size: 2em;
+}
+
+/* Download buttons */
+#downloads {
+    display: flex;
+    align-items: center;
+    column-gap: 2em;
+    padding: 1em 4vw 4em 4vw;
+    overflow-x: auto;
+}
+#downloads > .boxlink {
+    display: flex;
+    align-items: center;
+    column-gap: 0.7em;
+    padding: 0.75em;
+    color: #e7e7e7;
+    background: rgba(255, 255, 255, 0.15);
+    border: 0.2em solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 0.3em rgba(255, 255, 255, 0.3);
+}
+#downloads > .boxlink:hover {
+    color: #404040;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 0 0.4em rgba(50, 50, 50, 0.8);
+}
+/* Center the download buttons */
+#downloads > .boxlink:first-child { margin-left: auto; }
+#downloads > .boxlink:last-child { margin-right: auto; }
+
+/* Quicklinks */
+#quicklinks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: #eee;
+}
+#quicklinks > a {
+    display: block;
+    padding: 1.5em 2em;
+    color: #282828;
+    text-decoration: none;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+}
+#quicklinks > a:hover {
+    color: #1a1a1a;
+    background: #b6b6b6;
+}
+#quicklinks > a > svg {
+    display: block;
+    margin: 0 auto;
+    color: #555;
+}
+#quicklinks > a:hover > svg { color: #404040 }
+
+/* Heading + paragraph (+ spreadsheet/image) sections */
+section {
+    display: flex;
+    align-items: center;
+    gap: 1em 3em;
+    margin: 4em auto;
+    padding: 0 4vw;
+    max-width: 91rem;
+    font-size: 1.3rem;
+}
+section h2 {
+    margin: 0;
+    font-size: 2em;
+}
+section.single-column {
+    flex-direction: column;
+    text-align: center;
+}
+section.single-column > * { margin: 0; }
+section.single-column p { max-width: 50em; }
+section.single-column ul {
+    padding: 0;
+    list-style: none;
+}
+section.multi-column {
+    flex-direction: row;
+    justify-content: center;
+}
+section.multi-column.rtl { flex-direction: row-reverse; }
+section.multi-column > div:first-child { max-width: 40em; }
+section.multi-column p { margin: 1em 0; }
+section.multi-column p:last-child { margin-bottom: 0; }
+
+/* Spreadsheet */
+.spreadsheet {
+    margin: 0;
+    font-size: min(0.6rem, 1.3vw);
+    white-space: nowrap;
+    cursor: cell;
+}
+.spreadsheet th {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background: #f0f0f0;
+}
+.spreadsheet td {
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    background: #fbfbfb;
+}
+.spreadsheet tr:first-child td, .spreadsheet td:first-child {
+    text-align: center;
+    background: #e7e7e7;
+}
+
+/* Interactive images */
+.flick { position: relative; }
+.flick input { display: none; }
+.flick img { display: block; }
+.flick img:nth-of-type(2) {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.flick input:checked ~ img:nth-of-type(2) { display: block; }
+.flick label {
+    position: absolute;
+    box-sizing: border-box;
+    border-width: 3px;
+    border-style: outset;
+    border-color: #c75450;
+    transition: border-color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+    animation: flick-button-anim 1s infinite alternate;
+}
+@keyframes flick-button-anim {
+    from { box-shadow: 0 0 0.15em -0.15em rgba(199, 84, 80, 0.5); }
+    to { box-shadow: 0 0 0.15em 0.15em rgba(199, 84, 80, 0.5); }
+}
+.flick label:hover {
+    border-color: #c55854;
+    background: rgba(255, 255, 255, 0.1);
+}
+.flick input:checked ~ label { border-style: inset; }
+
+/* GPL image and sample credits video */
+#gpl-image {
+    padding: 0 1em 0 2em;
+    height: 13em;
+}
+video { width: 100%; }
+
+/* "To the Downloads" button */
+#up-button {
+    margin-top: 0.8em;
+    padding: 0.4em 2em;
+    font-size: 1.3em;
+    background: #222;
+    color: #eee;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0.15em solid #111;
+    border-radius: 0.3em;
+    box-shadow: 0 0 0.2em #444;
+    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+#up-button:hover {
+    color: #2f2f2f;
+    background-color: #eee;
+    box-shadow: inset 0 0 0.3em #444;
+}

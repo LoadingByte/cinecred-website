@@ -1,0 +1,46 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.user-interface.overview") }}</p>
+  <img src="toggle-dialogs.gif" alt="{{ l10n("guide.user-interface.overview.alt") }}">
+  <h2>{{ l10n("guide.user-interface.mainWindow.title") }}</h2>
+  <p>{{ l10n("guide.user-interface.mainWindow.preview") }}</p>
+  <img src="pages.gif" alt="{{ l10n("guide.user-interface.mainWindow.preview.alt") }}">
+  <p>{{ l10n("guide.user-interface.mainWindow.layoutGuides") }}</p>
+  <ul>
+    <li><span style="color: #b847ff">—</span> {{ l10n("cinecred.ui.edit.guidesTooltip.page") }}</li>
+    <li><span style="color: #00d0d0">—</span> {{ l10n("cinecred.ui.edit.guidesTooltip.spine") }}</li>
+    <li><span style="color: #ff6500">—</span> {{ l10n("cinecred.ui.edit.guidesTooltip.bodyCell") }}</li>
+    <li><span style="color: #ff0000">—</span> {{ l10n("cinecred.ui.edit.guidesTooltip.bodyWidth") }}</li>
+    <li><span style="color: #00ca00">—</span> {{ l10n("cinecred.ui.edit.guidesTooltip.headTail") }}</li>
+  </ul>
+  <img src="layout-guides.gif" alt="{{ l10n("guide.user-interface.mainWindow.layoutGuides.alt") }}">
+  <p>{{ l10n("guide.user-interface.mainWindow.standardOverlays") }}</p>
+  <img src="overlays-standard.gif" alt="">
+  <p>{{ l10n("guide.user-interface.mainWindow.customOverlays") }}</p>
+  <img src="overlays-custom.gif" alt="">
+  <h2>{{ l10n("guide.user-interface.stylingWindow.title") }}</h2>
+  <p>{{ l10n("guide.user-interface.stylingWindow.intro").format(' href="../project-settings/"', ' href="../page-style/"', ' href="../content-style/"', ' href="../letter-style/"') }}</p>
+  <img src="edit.gif" alt="{{ l10n("guide.user-interface.stylingWindow.intro.alt") }}">
+  <p>{{ l10n("guide.user-interface.stylingWindow.loadLastSaved") }}</p>
+  <img src="reset.gif" alt="{{ l10n("guide.user-interface.stylingWindow.loadLastSaved.alt") }}">
+  <p>{{ l10n("guide.user-interface.stylingWindow.snap") }}</p>
+  <img src="snap-spreadsheet-editor.gif" alt="{{ l10n("guide.user-interface.stylingWindow.snap.alt") }}">
+  <h2>{{ l10n("guide.user-interface.videoWindow.title") }}</h2>
+  <p>{{ l10n("guide.user-interface.videoWindow.intro") }}</p>
+  <img src="video-preview.gif" alt="{{ l10n("guide.user-interface.videoWindow.intro.alt") }}">
+  <p>{{ l10n("guide.user-interface.videoWindow.deckLink").format(' href="https://www.blackmagicdesign.com/' + choose_transl({"en": "", "de": "de/", "fr": "fr/", "zh-CN": "cn/"}) + 'products/decklink" target="_blank"') }}</p>
+  <img src="decklink.gif" alt="{{ l10n("guide.user-interface.videoWindow.deckLink.alt") }}">
+  <h2>{{ l10n("guide.user-interface.deliveryWindow.title") }}</h2>
+  <p>{{ l10n("guide.user-interface.deliveryWindow.formats").format("<em>csv/edl/otio/fcpxml/xml</em>") }}</p>
+  <p>{{ l10n("guide.user-interface.deliveryWindow.transparency").format("<em>" + l10n("cinecred.ui.deliverConfig.transparency.TRANSPARENT") + "</em>", "<em>" + l10n("cinecred.ui.deliverConfig.transparency") + "</em>", "<em>" + l10n("cinecred.ui.deliverConfig.transparency.MATTE") + "</em>") }}</p>
+  <p>{{ l10n("guide.user-interface.deliveryWindow.multipliers") }}</p>
+  <p>{{ l10n("guide.user-interface.deliveryWindow.interlacing").format("<em>" + l10n("cinecred.ui.deliverConfig.scan") + "</em>") }}</p>
+  <p>{{ l10n("guide.user-interface.deliveryWindow.colorSpaces").format(' href="../color-management/"') }}</p>
+  <img src="delivery.gif" alt="{{ l10n("guide.user-interface.deliveryWindow.alt") }}">
+  <h2>{{ l10n("guide.user-interface.log.title") }}</h2>
+  <p>{{ l10n("guide.user-interface.log.creditsWarning") }}</p>
+  <p>{{ l10n("guide.user-interface.log.stylingWarning") }}</p>
+  <img src="warnings.png" alt="{{ l10n("guide.user-interface.log.alt") }}">
+{% endblock %}

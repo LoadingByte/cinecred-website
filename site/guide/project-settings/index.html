@@ -1,0 +1,53 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.project-settings.intro") }}</p>
+  <h2>{{ l10n("guide.project-settings.runtimeAndFPS.title").format(l10n("cinecred.ui.styling.global.resolution"), l10n("cinecred.ui.styling.global.fps")) }}</h2>
+  <p>{{ l10n("guide.project-settings.runtimeAndFPS.text") }}</p>
+  <img src="resolution-and-frame-rate.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.global.timecodeFormat") }}</h2>
+  <p>{{ l10n("guide.project-settings.timecodeFormat.text") }}</p>
+  <img src="timecode-format.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.global.runtimeFrames") }}</h2>
+  <p>{{ l10n("guide.project-settings.runtimeFineAdjustment.how") }}</p>
+  <img src="runtime-fine-adjustment.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <p>{{ l10n("guide.project-settings.runtimeFineAdjustment.warning") }}</p>
+  <p>{{ l10n("guide.project-settings.runtimeFineAdjustment.multi").format('<a href="../page-style/#runtime-fine-adjustment"><em>' + l10n("cinecred.ui.styling.page.scrollRuntimeFrames") + "</em></a>", '<a href="../credits-spreadsheet/#page-runtime"><em>@' + l10n("cinecred.projectIO.credits.table.pageRuntime") + "</em></a>") }}</p>
+  <h2>{{ l10n("guide.project-settings.leaveFramesBlank.title") }}</h2>
+  <p>{{ l10n("guide.project-settings.leaveFramesBlank.text") }}</p>
+  <img src="leave-frames-blank.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.global.grounding") }}</h2>
+  <p>{{ l10n("guide.project-settings.grounding.text") }}</p>
+  <img src="grounding.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.global.unitVGapPx") }}</h2>
+  <p>{{ l10n("guide.project-settings.unitVGap.use").format(' href="../credits-spreadsheet/#vertical-gaps"') }}</p>
+  <p>{{ l10n("guide.project-settings.unitVGap.tip") }}</p>
+  <img src="unit-vgap.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.global.locale") }}</h2>
+  <p>{{ l10n("guide.project-settings.locale.text") }}</p>
+  <img src="locale.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.global.uppercaseExceptions") }}</h2>
+  <p>{{ l10n("guide.project-settings.uppercaseExceptions.intro").format(' href="../letter-style/#uppercase"') }}</p>
+  <p>{{ l10n("guide.project-settings.uppercaseExceptions.simple") }}</p>
+  <p>{{ l10n("guide.project-settings.uppercaseExceptions.placeholders") }}</p>
+  <ul>
+    <li>
+      {{ l10n("guide.project-settings.uppercaseExceptions.pattern").format("_von_") }}
+      <ul>
+        <li><em>Ronny von Tommy</em> → <em>RONNY von TOMMY</em></li>
+        <li><em>von Tommy</em> → <em>von TOMMY</em></li>
+        <li><em>Cleavon Tommy</em> → <em>CLEAVON TOMMY</em></li>
+      </ul>
+    </li>
+    <li>
+      {{ l10n("guide.project-settings.uppercaseExceptions.pattern").format("_Mac#") }}
+      <ul>
+        <li><em>Johnny MacRonny</em> → <em>JOHNNY MacRONNY</em></li>
+        <li><em>Johnny Macbeth</em> → <em>JOHNNY MACBETH</em></li>
+      </ul>
+    </li>
+  </ul>
+  <p>{{ l10n("guide.project-settings.uppercaseExceptions.default") }}</p>
+  <img src="uppercase-exceptions.gif" alt="{{ l10n("guide.settingDemo") }}">
+{% endblock %}

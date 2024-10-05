@@ -1,0 +1,52 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("security-warnings.intro") }}</p>
+  <h2>{{ l10n("security-warnings.windows.title") }}</h2>
+  <p>{{ l10n("security-warnings.windows.smartScreen").format(' href="https://en.wikipedia.org/wiki/Microsoft_SmartScreen" target="_blank"') }}</p>
+  <p>{{ l10n("security-warnings.windows.costly") }}</p>
+  <h3>{{ l10n("security-warnings.windows.edge.title") }}</h3>
+  <p>{{ l10n("security-warnings.windows.edge.warning") }}</p>
+  <img src="ms-edge-smartscreen-1.png" alt="">
+  <p>{{ l10n("security-warnings.windows.edge.keep") }}</p>
+  <img src="ms-edge-smartscreen-2.png" alt="">
+  <p>{{ l10n("security-warnings.windows.edge.showMore") }}</p>
+  <img src="ms-edge-smartscreen-3.png" alt="">
+  <p>{{ l10n("security-warnings.windows.edge.keepAnyway") }}</p>
+  <img src="ms-edge-smartscreen-4.png" alt="">
+  <h3>{{ l10n("security-warnings.windows.launch.title") }}</h3>
+  <p>{{ l10n("security-warnings.windows.launch.warning") }}</p>
+  <img src="windows-smartscreen-1.png" alt="">
+  <p>{{ l10n("security-warnings.windows.launch.runAnyway") }}</p>
+  <img src="windows-smartscreen-2.png" alt="">
+  <h2>{{ l10n("security-warnings.macOS.title") }}</h2>
+  <p>{{ l10n("security-warnings.macOS.gatekeeper").format(' href="https://support.apple.com/guide/security/app-code-signing-process-sec3ad8e6e53/web" target="_blank"') }}</p>
+  <p>{{ l10n("security-warnings.macOS.costly") }}</p>
+  <h3>{{ l10n("security-warnings.macOS.install.title") }}</h3>
+  <p>{{ l10n("security-warnings.macOS.install.warning") }}</p>
+  <img src="macos-gatekeeper-pkg-1.png" alt="">
+  <p>{{ l10n("security-warnings.macOS.install.rightClick") }}</p>
+  <img src="macos-gatekeeper-pkg-2.png" alt="">
+  <p>{{ l10n("security-warnings.macOS.install.open") }}</p>
+  <img src="macos-gatekeeper-pkg-3.png" alt="">
+  <h3>{{ l10n("security-warnings.macOS.app.title") }}</h3>
+  <p>{{ l10n("security-warnings.macOS.app.warning") }}</p>
+  <img src="macos-gatekeeper-app-1.png" alt="">
+  <p>{{ l10n("security-warnings.macOS.app.open") }}</p>
+  <p>{{ l10n("security-warnings.macOS.app.quarantine") }}</p>
+  <ul>
+    <li>
+      <p>{{ l10n("security-warnings.macOS.app.quarantine.downloads") }}</p>
+      <pre><code>cd Downloads
+xattr -d com.apple.quarantine Cinecred.app</code></pre>
+    </li>
+    <li>
+      <p>{{ l10n("security-warnings.macOS.app.quarantine.applications") }}</p>
+      <pre><code>cd /Applications
+sudo xattr -d com.apple.quarantine Cinecred.app</code></pre>
+    </li>
+  </ul>
+  <img src="macos-gatekeeper-app-2.png" alt="">
+  <p>{{ l10n("security-warnings.macOS.app.launch") }}</p>
+{% endblock %}

@@ -1,0 +1,3 @@
+[submodule "cinecred"]
+	path = cinecred
+	url = https://github.com/LoadingByte/cinecred.git
