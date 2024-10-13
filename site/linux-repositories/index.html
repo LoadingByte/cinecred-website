@@ -8,17 +8,17 @@
   <ol>
     <li>
       <p>{{ l10n("linux-repositories.apt.pgp") }}</p>
-      <pre><code>$ sudo mkdir -m 755 /etc/apt/keyrings/
-$ sudo wget -P /etc/apt/keyrings/ https://cinecred.com/linux-repositories/cinecred.asc</code></pre>
+      <pre><code>sudo mkdir -m 755 /etc/apt/keyrings/
+sudo wget -P /etc/apt/keyrings/ https://cinecred.com/linux-repositories/cinecred.asc</code></pre>
     </li>
     <li>
       <p>{{ l10n("linux-repositories.apt.repo") }}</p>
-      <pre><code>$ echo 'deb [signed-by=/etc/apt/keyrings/cinecred.asc] https://cinecred.com/debian/ stable main' | sudo tee /etc/apt/sources.list.d/cinecred.list</code></pre>
+      <pre><code>echo 'deb [signed-by=/etc/apt/keyrings/cinecred.asc] https://cinecred.com/debian/ stable main' | sudo tee /etc/apt/sources.list.d/cinecred.list</code></pre>
     </li>
     <li>
       <p>{{ l10n("linux-repositories.installCommands") }}</p>
-      <pre><code>$ sudo apt update
-$ sudo apt install cinecred</code></pre>
+      <pre><code>sudo apt update
+sudo apt install cinecred</code></pre>
     </li>
   </ol>
   <h2 id="yum">YUM (RHEL, Fedora, CentOS, SUSE, &hellip;)</h2>
@@ -36,7 +36,7 @@ gpgkey=https://cinecred.com/linux-repositories/cinecred.asc</code></pre>
     </li>
     <li>
       <p>{{ l10n("linux-repositories.installCommands") }}</p>
-      <pre><code>$ sudo yum install cinecred</code></pre>
+      <pre><code>sudo yum install cinecred</code></pre>
     </li>
   </ol>
   <h2 id="aur">AUR (Arch, Manjaro, &hellip;)</h2>
