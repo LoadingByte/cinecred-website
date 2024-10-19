@@ -27,9 +27,9 @@
           {% for avail_lang in avail_langs %}
             <li>
               {% if avail_lang == lang %}
-                <strong>{{ avail_lang[-2:]|upper }}</strong>
+                <strong>{{ l10n("language") }}</strong>
               {% else %}
-                <a href="" onclick="document.cookie = 'lang={{ avail_lang }}; path=/'; window.location.reload(); return false">{{ avail_lang[-2:]|upper }}</a>
+                <a href="" onclick="document.cookie = 'lang={{ avail_lang }}; path=/'; window.location.reload(); return false">{{ l10n(avail_lang, "language") }}</a>
               {% endif %}
             </li>
           {% endfor %}

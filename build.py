@@ -169,7 +169,7 @@ for page in pages:
         html = jinja_template.render(
             avail_langs=LANGS, lang=lang, title=l10n(lang, page.title_key),
             sitemap=sitemap(root_page, page, lang), breadcrumb=breadcrumb, platforms=platforms, releases=releases,
-            l10n=partial(l10n, lang),
+            l10n=lambda *args: l10n(lang, args[0]) if len(args) == 1 else l10n(*args),
             choose_transl=lambda d: d.get(lang, d[FALLBACK_LANG])
         )
         if "[[TOC]]" in html:
