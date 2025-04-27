@@ -14,7 +14,7 @@
         <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
         <th>@{{ l10n("cinecred.projectIO.credits.table.vGap") }}</th>
         <th>@{{ l10n("cinecred.projectIO.credits.table.contentStyle") }}</th>
-        <th>@{{ l10n("cinecred.projectIO.credits.table.breakMatch") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.breakHarmonization") }}</th>
         <th>@{{ l10n("cinecred.projectIO.credits.table.spinePos") }}</th>
         <th>@{{ l10n("cinecred.projectIO.credits.table.pageStyle") }}</th>
         <th>@{{ l10n("cinecred.projectIO.credits.table.pageRuntime") }}</th>
@@ -112,66 +112,29 @@
     <tr><td></td><td>Copyright © 2023 &lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.style") }} {{ l10n("cinecred.project.template.letterStyleName") }}&rbrace;&rbrace;Callie Cash&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.style") }}&rbrace;&rbrace; and &lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.style") }} {{ l10n("cinecred.project.template.letterStyleName") }}&rbrace;&rbrace;Molly Money</td><td></td></tr>
   </table>
   <img src="style-tag.png" alt="">
-  <h2>{{ l10n("guide.credits-spreadsheet.pictures.title") }}</h2>
-  <p>{{ l10n("guide.credits-spreadsheet.pictures.how").format("<em>Cinecred Large.svg</em>") }}</p>
+  <h3>{{ l10n("guide.credits-spreadsheet.picturesAndVideos.title") }}</h3>
+  <p>{{ l10n("guide.credits-spreadsheet.picturesAndVideos.how").format("<em>Cinecred.svg</em>", "<em>Blooper.mkv</em>") }}</p>
   <table>
     <tr>
       <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
       <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
       <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
     </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.pic") }} Cinecred Large.svg&rbrace;&rbrace;</td><td></td></tr>
+    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.pic") }} Cinecred&rbrace;&rbrace;</td><td></td></tr>
+    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Blooper&rbrace;&rbrace;</td><td></td></tr>
   </table>
-  <img src="pic-tag.png" alt="">
-  <h3>{{ l10n("guide.credits-spreadsheet.pictures.formats.title") }}</h3>
-  <p>{{ l10n("guide.credits-spreadsheet.pictures.formats.permissible").format("<em>svg/pdf/ai/eps/ps</em>", "<em>png/gif</em>") }}</p>
-  <p>{{ l10n("guide.credits-spreadsheet.pictures.formats.jpeg").format("<em>jpg/jpeg</em>") }}</p>
-  <div class="figures">
-    <figure>
-      <img src="jpeg-quality.png" alt="{{ l10n("guide.credits-spreadsheet.pictures.formats.jpeg.alt").format("PNG") }}">
-      <figcaption>PNG</figcaption>
-    </figure>
-    <figure>
-      <img src="jpeg-quality.jpg" alt="{{ l10n("guide.credits-spreadsheet.pictures.formats.jpeg.alt").format("JPEG") }}">
-      <figcaption>JPEG</figcaption>
-    </figure>
-  </div>
-  <h3>{{ l10n("guide.credits-spreadsheet.pictures.resizeAndCrop.title") }}</h3>
-  <p>{{ l10n("guide.credits-spreadsheet.pictures.resizeAndCrop.resize") }}</p>
+  <img src="pic-and-video-tags.png" alt="">
+  <p>{{ l10n("guide.credits-spreadsheet.picturesAndVideos.configure").format(' href="../picture-video/"') }}</p>
   <table>
     <tr>
       <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
       <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
       <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
     </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.pic") }} Cinecred Large.svg 200x&rbrace;&rbrace;</td><td></td></tr>
+    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.pic") }} Cinecred XXL&rbrace;&rbrace;</td><td></td></tr>
+    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.pic") }} Cinecred Petit&rbrace;&rbrace;</td><td></td></tr>
   </table>
-  <p>{{ l10n("guide.credits-spreadsheet.pictures.resizeAndCrop.crop").format("<em>svg/pdf/ai/eps/ps</em>", l10n("cinecred.projectIO.credits.table.crop")) }}</p>
-  <table>
-    <tr>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
-    </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.pic") }} Cinecred Large.svg {{ l10n("cinecred.projectIO.credits.table.crop") }}&rbrace;&rbrace;</td><td></td></tr>
-  </table>
-  <img src="pic-crop.gif" alt="">
-  <p>{{ l10n("guide.credits-spreadsheet.pictures.resizeAndCrop.combineOptions") }}</p>
-  <h2>{{ l10n("guide.credits-spreadsheet.videos.title") }}</h2>
-  <p>{{ l10n("guide.credits-spreadsheet.videos.how").format("<em>Blooper.mov</em>") }}</p>
-  <table>
-    <tr>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
-    </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Blooper.mov&rbrace;&rbrace;</td><td></td></tr>
-  </table>
-  <p>{{ l10n("guide.credits-spreadsheet.videos.playStart") }}</p>
-  <img src="video-tag-moving.gif" alt="">
-  <p>{{ l10n("guide.credits-spreadsheet.videos.stillPreview") }}</p>
-  <img src="video-tag.png" alt="">
-  <p>{{ l10n("guide.credits-spreadsheet.videos.imgSeqLayout") }}</p>
+  <p>{{ l10n("guide.credits-spreadsheet.picturesAndVideos.imgSeqLayout") }}</p>
   <ul>
     <li class="folder">
       {{ l10n("demo.projectDir") }}
@@ -188,7 +151,7 @@
       </ul>
     </li>
   </ul>
-  <p>{{ l10n("guide.credits-spreadsheet.videos.imgSeqSyntax") }}</p>
+  <p>{{ l10n("guide.credits-spreadsheet.picturesAndVideos.imgSeqSyntax") }}</p>
   <table>
     <tr>
       <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
@@ -197,85 +160,6 @@
     </tr>
     <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Vanity Card&rbrace;&rbrace;</td><td></td></tr>
   </table>
-  <h3>{{ l10n("guide.credits-spreadsheet.videos.resize.title") }}</h3>
-  <p>{{ l10n("guide.credits-spreadsheet.videos.resize.how") }}</p>
-  <table>
-    <tr>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
-    </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Blooper.mov 200x&rbrace;&rbrace;</td><td></td></tr>
-  </table>
-  <h3>{{ l10n("guide.credits-spreadsheet.videos.margin.title") }}</h3>
-  <p>{{ l10n("guide.credits-spreadsheet.videos.margin.timeframe") }}</p>
-  <img src="video-standard-behavior.gif" alt="">
-  <p>{{ l10n("guide.credits-spreadsheet.videos.margin.oneTimecode").format(l10n("cinecred.projectIO.credits.table.margin")) }}</p>
-  <table>
-    <tr>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
-    </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Blooper.mov {{ l10n("cinecred.projectIO.credits.table.margin") }} 00:00:01:00&rbrace;&rbrace;</td><td></td></tr>
-  </table>
-  <img src="video-margin.gif" alt="">
-  <p>{{ l10n("guide.credits-spreadsheet.videos.margin.twoTimecodes") }}</p>
-  <table>
-    <tr>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
-    </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Blooper.mov {{ l10n("cinecred.projectIO.credits.table.margin") }} 00:00:01:00 00:00:00:00&rbrace;&rbrace;</td><td></td></tr>
-  </table>
-  <img src="video-two-margins.gif" alt="">
-  <h3>{{ l10n("guide.credits-spreadsheet.videos.trim.title") }}</h3>
-  <p>{{ l10n("guide.credits-spreadsheet.videos.trim.how").format(l10n("cinecred.projectIO.credits.table.in"), l10n("cinecred.projectIO.credits.table.out")) }}</p>
-  <p>{{ l10n("guide.credits-spreadsheet.videos.trim.examples") }}</p>
-  <table>
-    <tr>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
-    </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Blooper.mov {{ l10n("cinecred.projectIO.credits.table.in") }} 00:00:02:10 {{ l10n("cinecred.projectIO.credits.table.out") }} 00:00:04:10&rbrace;&rbrace;</td><td></td></tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Vanity Card {{ l10n("cinecred.projectIO.credits.table.in") }} 42&rbrace;&rbrace;</td><td></td></tr>
-  </table>
-  <img src="video-trim.gif" alt="">
-  <h3>{{ l10n("guide.credits-spreadsheet.videos.align.title") }}</h3>
-  <p>{{ l10n("guide.credits-spreadsheet.videos.align.how").format(l10n("cinecred.projectIO.credits.table.middle"), l10n("cinecred.projectIO.credits.table.end")) }}</p>
-  <table>
-    <tr>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
-    </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Blooper.mov {{ l10n("cinecred.projectIO.credits.table.in") }} 00:00:02:10 {{ l10n("cinecred.projectIO.credits.table.out") }} 00:00:04:10 {{ l10n("cinecred.projectIO.credits.table.middle") }}&rbrace;&rbrace;</td><td></td></tr>
-  </table>
-  <img src="video-align.gif" alt="">
-  <h3>{{ l10n("guide.credits-spreadsheet.videos.fade.title") }}</h3>
-  <p>{{ l10n("guide.credits-spreadsheet.videos.fade.how").format(l10n("cinecred.projectIO.credits.table.fade")) }}</p>
-  <table>
-    <tr>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
-    </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Blooper.mov {{ l10n("cinecred.projectIO.credits.table.margin") }} 00:00:01:00 {{ l10n("cinecred.projectIO.credits.table.fade") }} 00:00:00:12&rbrace;&rbrace;</td><td></td></tr>
-  </table>
-  <img src="video-fade.gif" alt="">
-  <p>{{ l10n("guide.credits-spreadsheet.videos.combineOptions") }}</p>
-  <table>
-    <tr>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
-    </tr>
-    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Blooper.mov x200 {{ l10n("cinecred.projectIO.credits.table.margin") }} 00:00:03:12 {{ l10n("cinecred.projectIO.credits.table.fade") }} 00:00:01:00 {{ l10n("cinecred.projectIO.credits.table.in") }} 00:04:20:00 {{ l10n("cinecred.projectIO.credits.table.end") }}&rbrace;&rbrace;</td><td></td></tr>
-  </table>
-  <h3>{{ l10n("guide.credits-spreadsheet.videos.audio.title") }}</h3>
-  <p>{{ l10n("guide.credits-spreadsheet.videos.audio.timeline").format("<em>" + l10n("cinecred.ui.deliverConfig.timelineFormat") + "</em>", "<em>csv/edl/otio/fcpxml/xml</em>") }}</p>
   <h2>{{ l10n("guide.credits-spreadsheet.vGaps.title") }}</h2>
   <p>{{ l10n("guide.credits-spreadsheet.vGaps.unitBased") }}</p>
   <table>
@@ -450,7 +334,7 @@
   <h2>{{ l10n("cinecred.projectIO.credits.table.pageGap") }}</h2>
   <p>{{ l10n("guide.credits-spreadsheet.pageGap.pause").format('<a href="../page-style/#subsequent-page-gap"><em>' + l10n("cinecred.ui.styling.page.subsequentGapFrames") + "</em></a>") }}</p>
   <p>{{ l10n("guide.credits-spreadsheet.pageGap.melt").format(l10n("cinecred.projectIO.credits.table.melt")) }}</p>
-  <p>{{ l10n("guide.credits-spreadsheet.pageGap.noMeltLimit") }}</p>
+  <p>{{ l10n("guide.credits-spreadsheet.pageGap.meltTransition").format(' href="../transition-style/"', l10n("cinecred.projectIO.credits.table.melt")) }}</p>
   <div class="table-scroll-wrapper">
     <table>
       <tr>
@@ -461,23 +345,46 @@
         <th>@{{ l10n("cinecred.projectIO.credits.table.pageGap") }}</th>
       </tr>
       <tr><td>A</td><td>Dirc Director</td><td>Film</td><td>{{ l10n("cinecred.project.PageBehavior.CARD") }}</td><td></td></tr>
-      <tr><td>&nbsp;</td><td></td><td></td><td></td><td>00:00:04:00</td></tr>
+      <tr><td></td><td></td><td></td><td></td><td>00:00:04:00</td></tr>
       <tr><td>1st AC</td><td>Paul Puller</td><td></td><td>{{ l10n("cinecred.project.PageBehavior.SCROLL") }}</td><td></td></tr>
       <tr><td>2nd AC</td><td>Charly Clapper</td><td></td><td></td><td></td></tr>
-      <tr><td>&nbsp;</td><td></td><td></td><td></td><td>{{ l10n("cinecred.projectIO.credits.table.melt") }}</td></tr>
+      <tr><td></td><td></td><td></td><td></td><td>{{ l10n("cinecred.projectIO.credits.table.melt") }} 00:00:02:00 {{ l10n("cinecred.project.template.transitionStyleLinear") }}</td></tr>
       <tr><td></td><td>Copyright © 2023</td><td></td><td>{{ l10n("cinecred.project.PageBehavior.CARD") }}</td><td></td></tr>
     </table>
   </div>
+  <p>{{ l10n("guide.credits-spreadsheet.pageGap.pagePreview") }}</p>
   <img src="page-gap-melt.gif" alt="">
-  <h2>{{ l10n("guide.credits-spreadsheet.breakMatch.title").format(l10n("cinecred.projectIO.credits.table.breakMatch")) }}</h2>
-  <p>{{ l10n("guide.credits-spreadsheet.breakMatch.familiar").format('<a href="../content-style/grid-layout/#match-column-widths"><em>' + l10n("cinecred.ui.styling.content.gridMatchColWidths") + "</em></a>", '<a href="../content-style/grid-layout/#match-row-height"><em>' + l10n("cinecred.ui.styling.content.gridMatchRowHeight") + "</em></a>", '<a href="../content-style/flow-layout/#match-cell-width-height"><em>' + l10n("guide.content-style.flow-layout.match.title") + "</em></a>", '<a href="../content-style/#match-head-tail-width"><em>' + l10n("guide.content-style.headTail.matchWidth.title") + "</em></a>") }}</p>
-  <p>{{ l10n("guide.credits-spreadsheet.breakMatch.use").format(l10n("cinecred.projectIO.credits.table.head"), l10n("cinecred.projectIO.credits.table.body"), l10n("cinecred.projectIO.credits.table.tail"), "<em>@" + l10n("cinecred.projectIO.credits.table.breakMatch") + "</em>") }}</p>
+  <p>{{ l10n("guide.credits-spreadsheet.pageGap.videoPreview") }}</p>
+  <img src="page-gap-melt-video.gif" alt="">
+  <p>{{ l10n("guide.credits-spreadsheet.pageGap.noMeltLimit") }}</p>
+  <p>{{ l10n("guide.credits-spreadsheet.pageGap.emptyScrollPages") }}</p>
+  <div class="table-scroll-wrapper">
+    <table>
+      <tr>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.pageStyle") }}</th>
+        <th>@{{ l10n("cinecred.projectIO.credits.table.pageGap") }}</th>
+      </tr>
+      <tr><td>1st AC</td><td>Paul Puller</td><td></td><td>{{ l10n("cinecred.project.PageBehavior.SCROLL") }}</td><td></td></tr>
+      <tr><td>2nd AC</td><td>Charly Clapper</td><td></td><td></td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td>-00:00:03:00</td></tr>
+      <tr><td></td><td></td><td></td><td>{{ l10n("cinecred.project.PageBehavior.SCROLL") }}</td><td></td></tr>
+      <tr><td></td><td></td><td></td><td></td><td>{{ l10n("cinecred.projectIO.credits.table.melt") }}</td></tr>
+      <tr><td></td><td>Copyright © 2023</td><td></td><td>{{ l10n("cinecred.project.PageBehavior.CARD") }}</td><td></td></tr>
+    </table>
+  </div>
+  <img src="page-gap-scroll-away.gif" alt="">
+  <h2>{{ l10n("guide.credits-spreadsheet.breakHarmonization.title").format(l10n("cinecred.projectIO.credits.table.breakHarmonization")) }}</h2>
+  <p>{{ l10n("guide.credits-spreadsheet.breakHarmonization.familiar").format('<a href="../content-style/grid-layout/#harmonize-column-widths"><em>' + l10n("cinecred.ui.styling.content.gridHarmonizeColWidths") + "</em></a>", '<a href="../content-style/grid-layout/#harmonize-row-height"><em>' + l10n("cinecred.ui.styling.content.gridHarmonizeRowHeight") + "</em></a>", '<a href="../content-style/flow-layout/#harmonize-cell-width-height"><em>' + l10n("guide.content-style.flow-layout.harmonize.title") + "</em></a>", '<a href="../content-style/#harmonize-head-tail-width"><em>' + l10n("guide.content-style.headTail.harmonizeWidth.title") + "</em></a>") }}</p>
+  <p>{{ l10n("guide.credits-spreadsheet.breakHarmonization.use").format(l10n("cinecred.projectIO.credits.table.head"), l10n("cinecred.projectIO.credits.table.body"), l10n("cinecred.projectIO.credits.table.tail"), "<em>@" + l10n("cinecred.projectIO.credits.table.breakHarmonization") + "</em>") }}</p>
   <table>
     <tr>
       <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
       <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
       <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
-      <th>@{{ l10n("cinecred.projectIO.credits.table.breakMatch") }}</th>
+      <th>@{{ l10n("cinecred.projectIO.credits.table.breakHarmonization") }}</th>
     </tr>
     <tr><td>Director of Photography</td><td>Peter Panner</td><td></td><td></td></tr>
     <tr><td>&nbsp;</td><td></td><td></td><td></td></tr>
@@ -488,5 +395,5 @@
     <tr><td>Key Grip</td><td>Detlef “Dolly” Driver</td><td></td><td></td></tr>
     <tr><td>Best Boy</td><td>Francesco Foreman</td><td></td><td></td></tr>
   </table>
-  <img src="break-match.gif" alt="">
+  <img src="break-harmonization.gif" alt="">
 {% endblock %}

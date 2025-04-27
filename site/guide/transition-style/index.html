@@ -1,0 +1,16 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.transition-style.intro") }}</p>
+  <ul>
+    <li>{{ l10n("guide.transition-style.uses.fades").format(' href="../page-style/#fade-in-out"', ' href="../picture-video/#fade-in-out"') }}</li>
+    <li>{{ l10n("guide.transition-style.uses.melts").format('<a href="../credits-spreadsheet/#page-gap"><em>@' + l10n("cinecred.projectIO.credits.table.pageGap") + "</em></a>") }}</li>
+  </ul>
+  <h2>{{ l10n("guide.styleName") }}</h2>
+  <p>{{ l10n("guide.transition-style.name.text") }}</p>
+  <img src="name.png" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("cinecred.ui.styling.transition.graph") }}</h2>
+  <p>{{ l10n("guide.transition-style.graph.text") }}</p>
+  <img src="graph.gif" alt="{{ l10n("guide.settingDemo") }}">
+{% endblock %}

@@ -1,0 +1,82 @@
+{% extends "_article.html" %}
+
+
+{% block article %}
+  <p>{{ l10n("guide.picture-video.intro").format(' href="../credits-spreadsheet/#pictures-videos"') }}</p>
+  <img src="auto-add.gif" alt="">
+  <p>{{ l10n("guide.picture-video.manual") }}</p>
+  <h2>{{ l10n("guide.styleName") }}</h2>
+  <p>{{ l10n("guide.picture-video.name.text") }}</p>
+  <img src="picture-name.png" alt="{{ l10n("guide.settingDemo") }}">
+  <img src="video-name.png" alt="{{ l10n("guide.settingDemo") }}">
+  <table>
+    <tr>
+      <th>@{{ l10n("cinecred.projectIO.credits.table.head") }}</th>
+      <th>@{{ l10n("cinecred.projectIO.credits.table.body") }}</th>
+      <th>@{{ l10n("cinecred.projectIO.credits.table.tail") }}</th>
+    </tr>
+    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.pic") }} Cinecred Cropped&rbrace;&rbrace;</td><td></td></tr>
+    <tr><td></td><td>&lbrace;&lbrace;{{ l10n("cinecred.projectIO.credits.table.video") }} Blooper&rbrace;&rbrace;</td><td></td></tr>
+  </table>
+  <h2>{{ l10n("guide.picture-video.file.title") }}</h2>
+  <p>{{ l10n("guide.picture-video.file.select") }}</p>
+  <img src="picture-file.png" alt="{{ l10n("guide.settingDemo") }}">
+  <img src="video-file.png" alt="{{ l10n("guide.settingDemo") }}">
+  <p>{{ l10n("guide.picture-video.file.imgSeq").format("<em>Vanity Card</em>") }}</p>
+  <ul>
+    <li class="folder">
+      {{ l10n("demo.projectDir") }}
+      <ul>
+        <li class="folder">
+          Vanity Card
+          <ul>
+            <li class="file">Vanity Card.0000001.png</li>
+            <li class="file">Vanity Card.0000002.png</li>
+            <li class="file">Vanity Card.0000003.png</li>
+            <li class="file">…</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p>{{ l10n("guide.picture-video.file.missing") }}</p>
+  <h2>{{ l10n("cinecred.ui.styling.picture.resolution") }}</h2>
+  <p>{{ l10n("guide.picture-video.resolution.text") }}</p>
+  <img src="resolution.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.picture-video.pictures.title") }}</h2>
+  <h3>{{ l10n("guide.picture-video.pictures.formats.title") }}</h3>
+  <p>{{ l10n("guide.picture-video.pictures.formats.permissible").format("<em>svg/pdf/ai/eps/ps</em>", "<em>png/gif</em>") }}</p>
+  <p>{{ l10n("guide.picture-video.pictures.formats.jpeg").format("<em>jpg/jpeg</em>") }}</p>
+  <div class="figures">
+    <figure>
+      <img src="jpeg-quality.png" alt="{{ l10n("guide.picture-video.pictures.formats.jpeg.alt").format("PNG") }}">
+      <figcaption>PNG</figcaption>
+    </figure>
+    <figure>
+      <img src="jpeg-quality.jpg" alt="{{ l10n("guide.picture-video.pictures.formats.jpeg.alt").format("JPEG") }}">
+      <figcaption>JPEG</figcaption>
+    </figure>
+  </div>
+  <h3>{{ l10n("cinecred.ui.styling.picture.cropBlankSpace") }}</h3>
+  <p>{{ l10n("guide.picture-video.pictures.cropBlankSpace.text").format("<em>svg/pdf/ai/eps/ps</em>") }}</p>
+  <img src="picture-crop-blank-space.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h2>{{ l10n("guide.picture-video.videos.title") }}</h2>
+  <p>{{ l10n("guide.picture-video.videos.playStart") }}</p>
+  <img src="video-moving.gif" alt="">
+  <p>{{ l10n("guide.picture-video.videos.stillPreview") }}</p>
+  <img src="video-preview.png" alt="">
+  <h3>{{ l10n("cinecred.ui.styling.tape.slice") }}</h3>
+  <p>{{ l10n("guide.picture-video.videos.slice.text") }}</p>
+  <img src="video-slice.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("cinecred.ui.styling.tape.temporallyJustify") }}</h3>
+  <p>{{ l10n("guide.picture-video.videos.temporallyJustify.text") }}</p>
+  <img src="video-temporally-justify.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("cinecred.ui.styling.tape.temporalMarginFrames") }}</h3>
+  <p>{{ l10n("guide.picture-video.videos.temporalMargin.text") }}</p>
+  <img src="video-temporal-margin.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.page-style.card.fade.title") }}</h3>
+  <p>{{ l10n("guide.page-style.card.fade.text").format("<em>" + l10n("cinecred.ui.styling.tape.fadeIn") + "</em>", ' href="../transition-style/"') }}</p>
+  <img src="video-fade.gif" alt="{{ l10n("guide.settingDemo") }}">
+  <h3>{{ l10n("guide.picture-video.videos.audio.title") }}</h3>
+  <p>{{ l10n("guide.picture-video.videos.audio.timeline").format("<em>" + l10n("cinecred.ui.deliverConfig.timelineFormat") + "</em>", "<em>csv/edl/otio/fcpxml/xml</em>") }}</p>
+{% endblock %}

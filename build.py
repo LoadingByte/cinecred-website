@@ -119,7 +119,7 @@ def sitemap(page, selected_page, lang):
         html += f'<a href="/{page.url}/">{l10n(lang, page.title_key)}</a>'
     child_pages = [child for child in pages if child.url != Path() and child.url.parent == page.url]
     if child_pages:
-        child_pages = sorted(child_pages, key=lambda child: l10n(lang, child.title_key))
+        child_pages.sort(key=lambda child: re.sub(r"^(\d\.)", r"0\1", l10n(lang, child.title_key)))
         html += "<ul>" + "".join(sitemap(child_page, selected_page, lang) for child_page in child_pages) + "</ul>"
     html += "</li>"
     if page.url == Path():
