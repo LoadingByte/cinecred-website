@@ -4,7 +4,7 @@
 {% block article %}
   <p>{{ l10n("guide.project-folder.structure") }}</p>
   <ul>
-    <li>{{ l10n("guide.project-folder.structure.creditsFile").format("<em>Credits.xlsx/xls/ods/csv</em>", "<em>Credits.url/webloc</em>") }}</li>
+    <li>{{ l10n("guide.project-folder.structure.creditsFile").format("<em>Credits.xlsx/xls/ods/numbers/csv</em>", "<em>Credits.url/webloc</em>") }}</li>
     <li>{{ l10n("guide.project-folder.structure.stylingFile").format("<em>Styling.toml</em>") }}</li>
     <li>{{ l10n("guide.project-folder.structure.fontFiles").format("TrueType <em>ttf/ttc</em>", "OpenType <em>otf/otc</em>") }}</li>
     <li>{{ l10n("guide.project-folder.structure.rasterPicFiles").format("<em>png/tiff/jpg/tga/psd</em>") }}</li>
@@ -17,7 +17,7 @@
     <li class="folder">
       {{ l10n("demo.projectDir") }}
       <ul>
-        <li class="file">Credits.csv</li>
+        <li class="file">Credits.xlsx</li>
         <li class="file">Styling.toml</li>
         <li class="folder">
           Fonts
@@ -32,7 +32,7 @@
               Rental
               <ul>
                 <li class="file">Blubber Rent.eps</li>
-                <li class="file">Hintertupfingen Verleih.svg</li>
+                <li class="file">Hintertupfingen Verleih.ai</li>
               </ul>
             </li>
             <li class="folder">
@@ -65,6 +65,6 @@
   <h2>{{ l10n("guide.project-folder.create.title") }}</h2>
   <p>{{ l10n("guide.project-folder.create.how") }}</p>
   <img src="create-project.gif" alt="">
-  <p>{{ l10n("guide.project-folder.create.googleSheet") }}</p>
+  <p>{{ l10n("guide.project-folder.create.onlineAccount") }}</p>
   <img src="add-online-account.gif" alt="">
 {% endblock %}
