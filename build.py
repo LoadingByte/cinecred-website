@@ -15,7 +15,7 @@ from sys import stderr
 import createrepo_c
 from jinja2 import Environment, FileSystemLoader
 
-LANGS = ["cs", "de", "en", "fr", "zh-CN"]
+LANGS = ["cs", "de", "en", "es", "fr", "zh-CN"]
 FALLBACK_LANG = "en"
 
 repo_dirpath = Path(__file__).parent

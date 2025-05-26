@@ -10,21 +10,21 @@
   <script type="text/javascript" src="/static/email.js"></script>
   <style>
     #layout-guides-button {
-      left: {{ 100 * choose_transl({"cs": 431, "de": 430, "en": 419, "fr": 406, "zh-CN": 414}) / 920 }}%;
+      left: {{ 100 * choose_transl({"cs": 418, "de": 417, "en": 406, "es": 421, "fr": 393, "zh-CN": 401}) / 920 }}%;
       top: {{ 100 * 6 / 610 }}%;
       width: {{ 100 * 24 / 920 }}%;
       height: {{ 100 * 24 / 610 }}%;
     }
     #runtime-adjustment-button {
-      left: {{ 100 * choose_transl({"cs": 440, "de": 447, "en": 452, "fr": 476, "zh-CN": 415}) / 900 }}%;
+      left: {{ 100 * choose_transl({"cs": 440, "de": 447, "en": 452, "es": 452, "fr": 476, "zh-CN": 415}) / 900 }}%;
       top: {{ 100 * 10 / 484 }}%;
       width: {{ 100 * 24 / 900 }}%;
       height: {{ 100 * 24 / 484 }}%;
     }
     #delivery-formats-button {
-      left: {{ 100 * choose_transl({"cs": 167, "de": 127, "en": 108, "fr": 164, "zh-CN": 95}) / 820 }}%;
+      left: {{ 100 * choose_transl({"cs": 147, "de": 134, "en": 133, "es": 146, "fr": 147, "zh-CN": 126}) / 820 }}%;
       top: {{ 100 * 41 / 590 }}%;
-      width: {{ 100 * choose_transl({"cs": 492, "de": 502, "en": 502, "fr": 495, "zh-CN": 502}) / 820 }}%;
+      width: {{ 100 * 502 / 820 }}%;
       height: {{ 100 * 26 / 590 }}%;
     }
   </style>
@@ -234,7 +234,7 @@
   <section class="multi-column">
     <div>
       <h2>{{ l10n("home.paragraphs.playback.title") }}</h2>
-      <p>{{ l10n("home.paragraphs.playback.text").format(' href="https://www.blackmagicdesign.com/' + choose_transl({"en": "", "de": "de/", "fr": "fr/", "zh-CN": "cn/"}) + 'products/decklink" target="_blank"') }}</p>
+      <p>{{ l10n("home.paragraphs.playback.text").format(' href="https://www.blackmagicdesign.com/' + choose_transl({"cs": "", "de": "de/", "en": "", "es": "es/", "fr": "fr/", "zh-CN": "cn/"}) + 'products/decklink" target="_blank"') }}</p>
     </div>
     <img src="home/screenshot-video-preview.png" alt="Screenshot of the video preview">
   </section>

@@ -1,4 +1,4 @@
-supported_langs = {["cs"]=true, ["de"]=true, ["en"]=true, ["fr"]=true, ["zh-CN"]=true}
+supported_langs = {["cs"]=true, ["de"]=true, ["en"]=true, ["es"]=true, ["fr"]=true, ["zh-CN"]=true}
 fallback_lang = "en"
 
 
