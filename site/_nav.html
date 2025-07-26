@@ -8,7 +8,7 @@
       </div>
       <div id="breadcrumb" class="navbar-text">
         {% for parent_url, parent_title in breadcrumb %}
-          <a href="/{{ parent_url }}">{{ parent_title }}</a> &#x2192;
+          <a href="/{{ parent_url }}/">{{ parent_title }}</a> &#x2192;
         {% endfor %}
         {{ title }}
       </div>
