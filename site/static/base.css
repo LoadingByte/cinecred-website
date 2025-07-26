@@ -14,8 +14,8 @@ table { margin: 1em auto; }
 .figures { margin: 1em 0; }
 
 /* Standard link style */
-a { color: #362; }
-a:hover { color: #241; }
+a { color: #14508d; }
+a:hover { color: #0d335a; }
 
 /* Standard boxlink style */
 .boxlink {
@@ -81,12 +81,12 @@ body {
     margin: 0;
     font-family: Titillium, sans-serif;
     line-height: 1.6;
-    color: #2f2f2f;
+    color: #2a2a2a;
 }
 #master { font-size: 1.1em; }
 header {
     color: #eee;
-    background: #222;
+    background: #080808;
     text-align: center;
 }
 .site-title { font-family: "Titillium Upright", sans-serif; }
